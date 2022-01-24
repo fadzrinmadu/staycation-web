@@ -1,0 +1,34 @@
+{
+  "files": {
+    "main.css": "/static/css/main.2a50e7bd.chunk.css",
+    "main.js": "/static/js/main.79e08a58.chunk.js",
+    "main.js.map": "/static/js/main.79e08a58.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.d3e53417.js",
+    "runtime-main.js.map": "/static/js/runtime-main.d3e53417.js.map",
+    "static/css/2.33d22cee.chunk.css": "/static/css/2.33d22cee.chunk.css",
+    "static/js/2.45aadecc.chunk.js": "/static/js/2.45aadecc.chunk.js",
+    "static/js/2.45aadecc.chunk.js.map": "/static/js/2.45aadecc.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.049403f8d15b2dc0a986370cfa39f0e5.js": "/precache-manifest.049403f8d15b2dc0a986370cfa39f0e5.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/2.33d22cee.chunk.css.map": "/static/css/2.33d22cee.chunk.css.map",
+    "static/css/main.2a50e7bd.chunk.css.map": "/static/css/main.2a50e7bd.chunk.css.map",
+    "static/js/2.45aadecc.chunk.js.LICENSE.txt": "/static/js/2.45aadecc.chunk.js.LICENSE.txt",
+    "static/media/completed.png": "/static/media/completed.b029ba5f.png",
+    "static/media/icon-calendar.svg": "/static/media/icon-calendar.67e25a39.svg",
+    "static/media/icon-cities.svg": "/static/media/icon-cities.e6a7cd81.svg",
+    "static/media/index.scss": "/static/media/icon-star.11a62c71.svg",
+    "static/media/icon-traveler.svg": "/static/media/icon-traveler.d2336c65.svg",
+    "static/media/icon-treasure.svg": "/static/media/icon-treasure.4f579769.svg",
+    "static/media/img-hero.jpg": "/static/media/img-hero.3f284a81.jpg",
+    "static/media/logo-bca.png": "/static/media/logo-bca.82a2a8d4.png",
+    "static/media/logo-mandiri.png": "/static/media/logo-mandiri.865aa86d.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.d3e53417.js",
+    "static/css/2.33d22cee.chunk.css",
+    "static/js/2.45aadecc.chunk.js",
+    "static/css/main.2a50e7bd.chunk.css",
+    "static/js/main.79e08a58.chunk.js"
+  ]
+}
