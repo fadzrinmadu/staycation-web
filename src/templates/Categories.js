@@ -31,7 +31,7 @@ export default function MostPicked({ data }) {
                           <img
                             src={
                               item.imageId[0]
-                                ? `http://localhost:4000/${item.imageId[0].imageUrl}`
+                                ? `https://staycationapinodejs.herokuapp.com/${item.imageId[0].imageUrl}`
                                 : ""
                             }
                             alt={item.title}

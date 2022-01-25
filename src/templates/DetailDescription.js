@@ -19,7 +19,7 @@ export default function DetailDescription({ data }) {
                   <img
                     width="38"
                     className="d-block mb-2"
-                    src={`http://localhost:4000/${feature.imageUrl}`}
+                    src={`https://staycationapinodejs.herokuapp.com/${feature.imageUrl}`}
                     alt={feature.name}
                   />{" "}
                   <span>{feature.qty}</span>{" "}

@@ -18,7 +18,7 @@ export default function DetailImage({ data }) {
                   <figure className="img-wrapper">
                     <img
                       className="img-cover"
-                      src={`http://localhost:4000/${item.imageUrl}`}
+                      src={`https://staycationapinodejs.herokuapp.com/${item.imageUrl}`}
                       alt={item._id}
                     />
                   </figure>

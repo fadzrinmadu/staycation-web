@@ -11,7 +11,7 @@ export default function Testimony({ data }) {
           <div className="col-auto" style={{ marginRight: 70 }}>
             <div className="testimonial-hero" style={{ width: 410 }}>
               <img
-                src={`http://localhost:4000/${data.imageUrl}`}
+                src={`https://staycationapinodejs.herokuapp.com/${data.imageUrl}`}
                 alt="Testimonial"
                 className="position-absolute"
                 style={{

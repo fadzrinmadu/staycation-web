@@ -14,7 +14,7 @@ export default function BookingInformation(props) {
                 <figure className="img-wrapper" style={{ height: 270 }}>
                   <img
                     className="img-cover"
-                    src={`http://localhost:4000/${ItemDetails.imageId[0].imageUrl}`}
+                    src={`https://staycationapinodejs.herokuapp.com/${ItemDetails.imageId[0].imageUrl}`}
                     alt={ItemDetails.title}
                   />
                 </figure>

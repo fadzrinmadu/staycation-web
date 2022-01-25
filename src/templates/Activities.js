@@ -28,7 +28,7 @@ export default function Activities({ data }) {
                       <img
                         src={
                           item.imageUrl
-                            ? `http://localhost:4000/${item.imageUrl}`
+                            ? `https://staycationapinodejs.herokuapp.com/${item.imageUrl}`
                             : ""
                         }
                         alt={item.name}
