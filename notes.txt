@@ -1,0 +1,14 @@
+PROJECT STRUCTURE
+
+Package : 
+- React
+- Vite
+- Eslint
+- Prettier
+- Husky
+- Typescript
+
+- Redux
+- Storyboard
+- Tailwind
+- Axios
