@@ -63,3 +63,8 @@ npx husky init
 
 ## Useful Links :
 - [React Project Structures](https://github.com/WebDevSimplified/react-folder-structure/tree/main/advanced)
+
+## Next Implementation :
+- Implement CI / CD
+- Implement GraphQL
+- Implement Firebase Analytics
