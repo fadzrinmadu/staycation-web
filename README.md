@@ -13,7 +13,7 @@ This project is set up with the following technologies and tools:
 - [Jest](https://jestjs.io/)
 - [Husky](https://typicode.github.io/husky/#/)
 
-Some command for build this project structure:
+## Some command for build this project structure:
 - Create a new Vite project
 ```sh
 npm create vite@latest my-react-app -- --template react-ts
@@ -60,3 +60,6 @@ npm install --save-dev jest @testing-library/react @testing-library/jest-dom @ty
 npm install --save-dev husky lint-staged
 npx husky init
 ```
+
+## Useful Links :
+- [React Project Structures](https://github.com/WebDevSimplified/react-folder-structure/tree/main/advanced)
