@@ -1,0 +1,14 @@
+# dependencies
+node_modules
+.next
+dist
+build
+
+# lock files
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+# git
+.gitignore
+.husky
