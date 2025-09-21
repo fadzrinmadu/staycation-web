@@ -5,7 +5,7 @@ const TreasuresIcon: React.FC = () => {
     <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
       <g clip-path="url(#clip0_1_44)">
       <path d="M32 0H0V32H32V0Z" fill="white"/>
-      <mask id="mask0_1_44" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="4" width="32" height="24">
+      <mask id="mask0_1_44" style={{ maskType: "alpha" }} maskUnits="userSpaceOnUse" x="0" y="4" width="32" height="24">
       <path fill-rule="evenodd" clip-rule="evenodd" d="M11.946 4.66663C11.3794 4.66663 10.8747 5.02471 10.6875 5.55949L9.83333 7.99996H5.33333C2.38781 7.99996 0 10.3878 0 13.3333V22.6666C0 25.6122 2.38781 28 5.33333 28H26.6667C29.6122 28 32 25.6122 32 22.6666V13.3333C32 10.3878 29.6122 7.99996 26.6667 7.99996H22.1667L21.3125 5.55949C21.1253 5.02471 20.6206 4.66663 20.054 4.66663H11.946Z" fill="white"/>
       </mask>
       <g mask="url(#mask0_1_44)">
