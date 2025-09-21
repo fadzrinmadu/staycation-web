@@ -1,3 +1,11 @@
+import { CitiesIcon } from "./CitiesIcon";
 import { MenuIcon } from "./MenuIcon";
+import { TravelersIcon } from "./TravelersIcon";
+import { TreasuresIcon } from "./TreasuresIcon";
 
-export { MenuIcon };
+export { 
+  CitiesIcon,
+  MenuIcon, 
+  TravelersIcon,
+  TreasuresIcon,
+};
