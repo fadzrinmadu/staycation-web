@@ -5,4 +5,11 @@ export default {
   component: Text,
 };
 
-export const Default = () => <Text value="We provide  what you need to enjoy your holiday with family. Time to make another memorable moments." />;
+export const Default = () => {
+  return (
+    <Text 
+      type="paragraph" 
+      value="We provide  what you need to enjoy your holiday with family. Time to make another memorable moments." 
+    />
+  );
+};

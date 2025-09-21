@@ -33,11 +33,13 @@ const Hero: React.FC<HeroProps> = (props: HeroProps) => {
     <div id="hero" className="flex flex-col-reverse md:flex-row justify-between items-center gap-10">
       <div className="max-w-[430px]">
         <Title 
+          type="h1"
           text="Forget busy work, start next vacation"
           className="mb-5"
         />
         <Text 
-          value="We provide  what you need to enjoy your holiday with family. Time to make another memorable moments." 
+          type="paragraph"
+          value="We provide  what you need to enjoy your holiday with family. Time to make another memorable moments."
           className="mb-[30px] max-w-[365px]"
         />
         <div className="mb-[60px]">
