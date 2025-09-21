@@ -1,5 +1,6 @@
 import Button from "./Button";
 import FeaturedBadge from "./FeaturedBadge";
+import Link from "./Link";
 import Logo from "./Logo";
 import Overlay from "./Overlay";
 import Rating from "./Rating";
@@ -10,6 +11,7 @@ import Title from "./Title";
 export { 
   Button,
   FeaturedBadge,
+  Link,
   Logo,
   Overlay,
   Rating,
