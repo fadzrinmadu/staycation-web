@@ -5,4 +5,4 @@ export default {
   component: Title,
 };
 
-export const Default = () => <Title text="Staycation Website" />;
+export const Default = () => <Title type="h1" text="Staycation Website" />;
