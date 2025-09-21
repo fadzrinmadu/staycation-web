@@ -23,7 +23,7 @@ const Featured: React.FC<FeaturedProps> = (props: FeaturedProps) => {
         {data.map((item, index) => (
           <FeaturedItem 
             {...item}
-            key={index}
+            key={item.title + index}
             type={type}
             className={clsx(type === "highlight" && index === 0 && "row-span-2")}
           />

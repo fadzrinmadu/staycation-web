@@ -17,11 +17,12 @@ const Footer: React.FC = () => {
           />
         </div>
         {footerLinks.map((link, index) => (
-          <div>
+          <div key={link.title + index}>
             <Title type="h4" text={link.title} className="mb-2" />
             <div className="flex flex-col gap-2">
-              {link.items.map((item) => (
-                <Link 
+              {link.items.map((item, index) => (
+                <Link
+                  key={item.title + index}
                   href={item.href}
                   title={item.title}
                 />

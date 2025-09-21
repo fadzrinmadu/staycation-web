@@ -13,10 +13,10 @@ const Rating: React.FC<RatingProps> = (props: RatingProps) => {
   return (
     <div className={clsx("flex gap-1", className)} {...rest}>
       {Array.from({ length: value }).map((_, index) => (
-        <StarIcon type="filled" />
+        <StarIcon key={index} type="filled" />
       ))}
       {Array.from({ length: ratingMax - value }).map((_, index) => {
-        return <StarIcon type="outlined" />;
+        return <StarIcon key={index} type="outlined" />;
       })}
     </div>
   )
