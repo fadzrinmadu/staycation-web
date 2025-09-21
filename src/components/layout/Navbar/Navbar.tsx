@@ -1,3 +1,5 @@
+"use client"
+
 import React, { useState } from "react";
 import clsx from "clsx";
 
@@ -22,10 +24,7 @@ const Navbar: React.FC<NavbarProps> = (props: NavbarProps) => {
   }
   
   return (
-    <div 
-      id="navbar" 
-      className={clsx("relative h-20 py-7 flex justify-between items-center")}
-    >
+    <div className={clsx("relative h-20 py-7 flex justify-between items-center")}>
       <Logo 
         onClick={() => {}} 
       />

@@ -5,7 +5,7 @@ import Copyright from "@/components/ui/Copyright";
 
 const Footer: React.FC = () => {
   return (
-    <div id="footer">
+    <>
       <div className="flex justify-between gap-x-[80px] gap-y-[24px] mb-[50px] flex-wrap">
         <div className="w-[258px] max-w-full">
           <Logo
@@ -31,7 +31,7 @@ const Footer: React.FC = () => {
         ))}
       </div>
       <Copyright />
-    </div>
+    </>
   );
 };
 

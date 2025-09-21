@@ -30,8 +30,8 @@ const statsItems: StatsItemProps[] = [
 
 const Hero: React.FC<HeroProps> = (props: HeroProps) => {
   return (
-    <div id="hero" className="flex flex-col-reverse md:flex-row justify-between items-center gap-10">
-      <div className="max-w-[430px]">
+    <div className="flex flex-col-reverse md:flex-row justify-between items-center gap-10">
+      <div className="w-[430px] max-w-full">
         <Title 
           type="h1"
           text="Forget busy work, start next vacation"
@@ -40,7 +40,7 @@ const Hero: React.FC<HeroProps> = (props: HeroProps) => {
         <Text 
           type="paragraph"
           value="We provide  what you need to enjoy your holiday with family. Time to make another memorable moments."
-          className="mb-[30px] max-w-[365px]"
+          className="mb-[30px] w-[365px] max-w-full"
         />
         <div className="mb-[60px]">
           <Button 
@@ -65,7 +65,7 @@ const Hero: React.FC<HeroProps> = (props: HeroProps) => {
         <Image 
           src={HeroBanner}
           alt="Hero Banner"
-          className="max-w-[537px]"
+          className="w-[537px] max-w-full"
         />
       </div>
     </div>

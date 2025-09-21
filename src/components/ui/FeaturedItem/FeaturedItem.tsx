@@ -10,7 +10,7 @@ interface FeaturedItemProps extends React.HTMLAttributes<HTMLDivElement> {
   title: string;
   description: string;
   type: "highlight" | "recommended";
-  badge: FeaturedBadgeProps;
+  badge?: FeaturedBadgeProps;
 }
 
 export type { FeaturedItemProps };
@@ -28,10 +28,14 @@ const FeaturedItem: React.FC<FeaturedItemProps> = (props: FeaturedItemProps) => 
         )}
       >
         <Overlay />
-        <FeaturedBadge 
-          {...badge} 
-          className={clsx("absolute top-0 right-0 z-10 w-[180px] h-[40px]")}
-        />
+        {badge && (
+          <FeaturedBadge
+            {...badge}
+            className={clsx(
+              "absolute top-0 right-0 z-10 w-[180px] h-[40px]"
+            )}
+          />
+        )}
         <Image 
           src={imagePath}
           alt="Featured Item"

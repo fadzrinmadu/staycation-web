@@ -14,7 +14,7 @@ const FeaturedBadge: React.FC<FeaturedBadgeProps> = (props: FeaturedBadgeProps) 
     <div
       className={
         clsx(`
-          max-w-[180px] h-10 
+          w-[180px] max-w-full h-10 
           bg-[#FF498B] 
           flex justify-center items-center 
           rounded-bl-[18px]

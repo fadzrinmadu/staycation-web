@@ -6,7 +6,7 @@ import { Button, Rating, Text, Title } from "@/components/ui";
 
 const Testimony: React.FC = () => {
   return (
-    <div id="hero" className="flex flex-col md:flex-row items-center gap-[70px]">
+    <div className="flex flex-col md:flex-row items-center gap-[70px]">
       <div>
         <Image
           src={TestimonyExample1}
