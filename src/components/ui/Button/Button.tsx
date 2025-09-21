@@ -1,13 +1,13 @@
 import React from "react";
 import clsx from "clsx";
 
-interface ButtonProps {
-  title: String;
+interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
+  text: String;
   variant: "primary" | "secondary";
 }
 
 const Button: React.FC<ButtonProps> = (props: ButtonProps) => {
-  const { title, variant } = props;
+  const { text, variant } = props;
   
   const baseClass = "min-h-[50px] min-w-[210px] p-3 text-base rounded-sm cursor-pointer";
   const primaryClass = `
@@ -24,7 +24,7 @@ const Button: React.FC<ButtonProps> = (props: ButtonProps) => {
     <button 
       className={clsx(baseClass, variant === "primary" ? primaryClass : secondaryClass)}
     >
-      {title}
+      {text}
     </button>
   );
 }

@@ -7,14 +7,14 @@ export default {
 
 export const Primary = {
   args: {
-    title: "Primary Button",
+    text: "Primary Button",
     variant: "primary",
   },
 };
 
 export const Secondary = {
   args: {
-    title: "Secondary Button",
+    text: "Secondary Button",
     variant: "secondary",
   },
 };
