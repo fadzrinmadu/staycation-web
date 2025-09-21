@@ -12,6 +12,7 @@ export const Default = () => {
       imagePath={FeaturedExample1}
       title="Blue Origin Fams"
       description="Jakarta, Indonesia"
+      type="highlight"
       badge={{ primaryText: "$50", secondaryText: "per night" }}
     />
   );

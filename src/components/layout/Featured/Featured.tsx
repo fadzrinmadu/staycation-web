@@ -24,7 +24,8 @@ const Featured: React.FC<FeaturedProps> = (props: FeaturedProps) => {
           <FeaturedItem 
             {...item}
             key={index}
-            className={clsx(type === "highlight" && index === 0 && "row-span-2")} 
+            type={type}
+            className={clsx(type === "highlight" && index === 0 && "row-span-2")}
           />
         ))}
       </div>
