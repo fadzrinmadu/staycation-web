@@ -1,5 +1,5 @@
 import { FeaturedItem } from "./FeaturedItem";
-import FeaturedExample from '@/assets/images/examples/featured-example.jpg'
+import { FeaturedExample1 } from "@/assets/images/examples";
 
 export default {
   title: "Components/UI/FeaturedItem",
@@ -9,7 +9,7 @@ export default {
 export const Default = () => {
   return (
     <FeaturedItem 
-      imagePath={FeaturedExample}
+      imagePath={FeaturedExample1}
       title="Blue Origin Fams"
       description="Jakarta, Indonesia"
       badge={{ primaryText: "$50", secondaryText: "per night" }}
