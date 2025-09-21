@@ -12,12 +12,14 @@ interface FeaturedItemProps extends React.HTMLAttributes<HTMLDivElement> {
   badge: FeaturedBadgeProps;
 }
 
+export type { FeaturedItemProps };
+
 const FeaturedItem: React.FC<FeaturedItemProps> = (props: FeaturedItemProps) => {
   const { imagePath, title, description, badge, className, ...rest } = props;
 
   return (
     <div
-      className={clsx("relative mb-4 h-[215px] max-w-[350px] rounded-[15px] overflow-hidden")}
+      className={clsx("relative mb-4 w-full h-full min-w-full min-h-[215px] rounded-[15px] overflow-hidden", className)}
     >
       <Overlay />
       <FeaturedBadge 
@@ -27,7 +29,7 @@ const FeaturedItem: React.FC<FeaturedItemProps> = (props: FeaturedItemProps) => 
       <Image 
         src={imagePath}
         alt="Featured Item"
-        className={clsx(`absolute h-[215px] object-cover rounded-[15px]`)}
+        className={clsx(`absolute w-full h-full object-cover rounded-[15px]`)}
       />
       <div className={clsx("absolute z-10 left-4 bottom-4 text-white")}>
         <h3 className={clsx("text-[20px] font-normal")}>{title}</h3>
