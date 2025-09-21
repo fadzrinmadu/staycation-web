@@ -6,6 +6,8 @@ interface FeaturedBadgeProps extends React.HTMLAttributes<HTMLDivElement> {
   secondaryText: string;
 }
 
+export type { FeaturedBadgeProps };
+
 const FeaturedBadge: React.FC<FeaturedBadgeProps> = (props: FeaturedBadgeProps) => {
   const { primaryText, secondaryText, className, ...rest } = props;
   return (

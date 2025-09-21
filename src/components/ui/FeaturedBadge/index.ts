@@ -1,3 +1,4 @@
 import { FeaturedBadge } from "./FeaturedBadge";
 
-export { FeaturedBadge };
+export type { FeaturedBadgeProps } from "./FeaturedBadge";
+export default FeaturedBadge;
