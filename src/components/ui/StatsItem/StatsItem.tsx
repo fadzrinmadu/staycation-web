@@ -1,10 +1,12 @@
 import React, { ReactNode } from "react";
 
 interface StatsItemProps extends React.HTMLAttributes<HTMLDivElement> {
-  icon: ReactNode
-  value: String
-  label: String
+  icon: ReactNode;
+  value: string;
+  label: string;
 }
+
+export type { StatsItemProps };
 
 const StatsItem: React.FC<StatsItemProps> = (props: StatsItemProps) => {
   const { id, icon, value, label, className, ...rest } = props;
