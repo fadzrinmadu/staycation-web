@@ -1,13 +1,19 @@
 import React from "react";
+import clsx from "clsx";
 
-interface TextProps {
+interface TextProps extends React.HTMLAttributes<HTMLParagraphElement> {
   value: String;
 }
 
 const Text: React.FC<TextProps> = (props: TextProps) => {
-  const { value } = props;
+  const { value, className, ...rest } = props;
   return (
-    <p className="text-base font-light text-[#969696] leading[1.7]">{value}</p>
+    <p 
+      className={clsx("text-base font-light text-[#969696] leading[1.7]", className)}
+      {...rest}
+    >
+      {value}
+    </p>
   );
 };
 
