@@ -4,7 +4,7 @@ import Image from "next/image";
 
 import type { StatsItemProps } from "@/components/ui/StatsItem";
 
-import HeroBanner from "@/assets/images/banner/hero-banner.jpg";
+import HeroBanner from "@/assets/images/banners/hero-banner.jpg";
 import { Button, StatsItem, Text, Title } from "@/components/ui";
 import { CitiesIcon, TravelersIcon, TreasuresIcon } from "@/assets/images/icons";
 
