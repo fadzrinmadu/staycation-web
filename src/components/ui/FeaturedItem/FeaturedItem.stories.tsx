@@ -9,6 +9,7 @@ export default {
 export const Default = () => {
   return (
     <FeaturedItem 
+      id="featured-item-1"
       imagePath={FeaturedExample1}
       title="Blue Origin Fams"
       description="Jakarta, Indonesia"

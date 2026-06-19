@@ -1,3 +1,4 @@
+import Breadcrumb from "./Breadcrumb";
 import Button from "./Button";
 import FeaturedBadge from "./FeaturedBadge";
 import Link from "./Link";
@@ -8,7 +9,8 @@ import StatsItem from "./StatsItem";
 import Text from "./Text";
 import Title from "./Title";
 
-export { 
+export {
+  Breadcrumb,
   Button,
   FeaturedBadge,
   Link,

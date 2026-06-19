@@ -6,6 +6,7 @@ import { FeaturedBadgeProps } from "../FeaturedBadge";
 import { FeaturedBadge, Overlay } from "@/components/ui";
 
 interface FeaturedItemProps extends React.HTMLAttributes<HTMLDivElement> {
+  id: string;
   imagePath: string | StaticImageData;
   title: string;
   description: string;
