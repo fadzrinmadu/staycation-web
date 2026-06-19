@@ -1,6 +1,7 @@
 import Breadcrumb from "./Breadcrumb";
 import Button from "./Button";
 import FeaturedBadge from "./FeaturedBadge";
+import ImageGallery from "./ImageGallery";
 import Link from "./Link";
 import Logo from "./Logo";
 import Overlay from "./Overlay";
@@ -13,6 +14,7 @@ export {
   Breadcrumb,
   Button,
   FeaturedBadge,
+  ImageGallery,
   Link,
   Logo,
   Overlay,
