@@ -11,6 +11,8 @@ interface BreadcrumbProps {
   items: BreadcrumbItem[];
 }
 
+export type { BreadcrumbItem };
+
 const Breadcrumb: FC<BreadcrumbProps> = (props: BreadcrumbProps) => {
   const { items } = props;
   
