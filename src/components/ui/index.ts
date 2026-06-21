@@ -25,3 +25,5 @@ export {
   Text,
   Title,
 };
+
+export * from "./Input";
