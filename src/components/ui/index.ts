@@ -6,6 +6,7 @@ import Link from "./Link";
 import Logo from "./Logo";
 import Overlay from "./Overlay";
 import Rating from "./Rating";
+import SectionParagraph from "./SectionParagraph";
 import StatsItem from "./StatsItem";
 import Text from "./Text";
 import Title from "./Title";
@@ -19,6 +20,7 @@ export {
   Logo,
   Overlay,
   Rating,
+  SectionParagraph,
   StatsItem,
   Text,
   Title,
