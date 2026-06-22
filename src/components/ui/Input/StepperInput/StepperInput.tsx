@@ -12,8 +12,8 @@ interface StepperInputProps {
 const StepperInput: FC<StepperInputProps> = (props: StepperInputProps) => {
   const { title, min = 0, max = 30, defaultValue = 0, onChange } = props;
   
-    const [count, setCount] = useState(defaultValue);
-
+  const [count, setCount] = useState(defaultValue);
+  
   const handleDecrement = () => {
     if (count <= min) return;
     const newValue = count - 1;
