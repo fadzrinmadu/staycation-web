@@ -1,3 +1,5 @@
+"use client"
+
 import { useState } from "react";
 import { formatDate } from "@/utils/date";
 import { CalendarIcon } from "@/assets/images/icons";
