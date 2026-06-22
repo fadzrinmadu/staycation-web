@@ -25,7 +25,10 @@ const Featured: React.FC<FeaturedProps> = (props: FeaturedProps) => {
         type === "recommended" && "grid-cols-1 md:grid-cols-2 lg:grid-cols-4",
       )}>
         {data.map((item, index) => (
-          <Link href={`/stays/${item.id}`}>
+          <Link 
+            key={`${item.id}-${index + 2}`}
+            href={`/stays/${item.id}`}
+          >
             <FeaturedItem 
               {...item}
               key={item.id}
