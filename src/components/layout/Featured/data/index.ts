@@ -19,6 +19,7 @@ import {
   FeaturedExample8,
   FeaturedExample9, 
 } from "@/assets/images/examples";
+import { ThingsToDo1, ThingsToDo2, ThingsToDo3, ThingsToDo4 } from "@/assets/images/examples/things";
 
 const mostPickedData: FeaturedItemProps[] = [
   {
@@ -183,9 +184,41 @@ const apartmentsWithKitchenSet: FeaturedItemProps[] = [
   },
 ];
 
+const thingsToDo: FeaturedItemProps[] = [
+  {
+    id: "things-to-do-1",
+    type: "recommended",
+    imagePath: ThingsToDo1,
+    title: "Green Lake",
+    description: "Nature",
+  },
+  {
+    id: "things-to-do-2",
+    type: "recommended",
+    imagePath: ThingsToDo2,
+    title: "Golf Area",
+    description: "Sport",
+  },
+  {
+    id: "things-to-do-3",
+    type: "recommended",
+    imagePath: ThingsToDo3,
+    title: "Labour and Wait",
+    description: "Shopping",
+  },
+  {
+    id: "things-to-do-4",
+    type: "recommended",
+    imagePath: ThingsToDo4,
+    title: "Snorkelling",
+    description: "Beach",
+  },
+];
+
 export { 
   apartmentsWithKitchenSet,
   hotelsWithLivingRoom,
   houseWithBakyardData,
   mostPickedData,
+  thingsToDo,
 };

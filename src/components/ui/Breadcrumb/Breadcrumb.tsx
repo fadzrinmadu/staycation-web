@@ -25,7 +25,8 @@ const Breadcrumb: FC<BreadcrumbProps> = (props: BreadcrumbProps) => {
           const isLast = index === items.length - 1;
           
           return (
-            <li 
+            <li
+              key={`${item.label} - ${index + 2}`}
               className={clsx("flex items-center gap-6 text-[18px]")}
             >
               {isLast ? (

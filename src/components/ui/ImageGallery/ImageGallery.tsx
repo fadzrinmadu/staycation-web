@@ -31,6 +31,7 @@ const ImageGallery: FC<ImageGalleryProps> = (props: ImageGalleryProps) => {
       >
         {secondaryImages.slice(0, 2).map((image, index) => (
           <div
+            key={index + 2}
             className="relative flex-1 rounded-2xl overflow-hidden"
           >
             <Image 

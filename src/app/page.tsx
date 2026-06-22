@@ -14,6 +14,7 @@ import {
   houseWithBakyardData, 
   mostPickedData, 
 } from "@/components/layout/Featured/data";
+import { TestimonyExample1 } from "@/assets/images/examples/testimony";
 
 const Home: React.FC = () => {
   return (
@@ -93,7 +94,14 @@ const Home: React.FC = () => {
           id="testimonial"
           className="w-[1110px] max-w-full m-auto mb-[100px]"
         >
-          <Testimony />
+          <Testimony
+            image={TestimonyExample1}
+            title="Happy Family"
+            rating={5}
+            quote="What a great trip with my family and i should try again and again next time soon ..."
+            author="Rian, Product Designer"
+            onReadStory={() => console.log("Read story")}
+          />
         </section>
       </main>
       

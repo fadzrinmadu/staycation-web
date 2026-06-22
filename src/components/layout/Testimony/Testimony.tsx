@@ -1,42 +1,53 @@
 import React from "react";
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 
-import { TestimonyExample1 } from "@/assets/images/examples";
 import { Button, Rating, Text, Title } from "@/components/ui";
 
-const Testimony: React.FC = () => {
+interface TestimonyProps {
+  image: StaticImageData | string;
+  title: string;
+  rating: number;
+  quote: string;
+  author: string;
+  onReadStory?: () => void;
+}
+
+const Testimony: React.FC<TestimonyProps> = (props) => {
+  const { image, title, rating, quote, author, onReadStory } = props;
+
   return (
     <div className="flex flex-col md:flex-row items-center gap-[70px]">
       <div>
         <Image
-          src={TestimonyExample1}
-          alt="Test Banner"
+          src={image}
+          alt={author}
           className="w-[405px] max-w-full"
         />
       </div>
       <div className="w-[640px] max-w-full">
         <Title
           type="h2"
-          text="Happy Family"
+          text={title}
           className="mb-10"
         />
-        <Rating 
-          value={5} 
-          className="mb-2" 
+        <Rating
+          value={rating}
+          className="mb-2"
         />
         <Text
           type="testimonial"
-          value="What a great trip with my family and i should try again and again next time soon ..." 
+          value={quote}
           className="mb-2"
         />
         <Text
           type="paragraph"
-          value="Rian, Product Designer" 
+          value={author}
           className="mb-10"
         />
         <Button
-          text="Read Their Story" 
+          text="Read Their Story"
           variant="primary"
+          onClick={onReadStory}
         />
       </div>
     </div>

@@ -15,7 +15,6 @@ import FeaturedExample14 from './featured-example-14.jpg';
 import FeaturedExample15 from './featured-example-15.jpg';
 import FeaturedExample16 from './featured-example-16.jpg';
 import FeaturedExample17 from './featured-example-17.jpg';
-import TestimonyExample1 from './testimony-example-1.jpg';
 
 export {
   FeaturedExample1,
@@ -35,5 +34,4 @@ export {
   FeaturedExample15,
   FeaturedExample16,
   FeaturedExample17,
-  TestimonyExample1,
 };

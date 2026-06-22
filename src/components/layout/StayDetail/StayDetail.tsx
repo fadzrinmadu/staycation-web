@@ -1,3 +1,5 @@
+"use client"
+
 import { FC } from "react";
 import clsx from "clsx";
 
@@ -24,7 +26,7 @@ import {
   WifiIcon, 
 } from "@/assets/images/icons";
 
-const Stay: FC = () => {
+const StayDetail: FC = () => {
   return (
     <div
       className={clsx("flex flex-col gap-y-[50px]")}
@@ -127,4 +129,4 @@ const Stay: FC = () => {
   );
 };
 
-export { Stay };
+export { StayDetail };
