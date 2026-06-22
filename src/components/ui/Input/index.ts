@@ -1,3 +1,7 @@
+import DateRangePicker from "./DateRangePicker";
 import StepperInput from "./StepperInput";
 
-export { StepperInput };
+export {
+  DateRangePicker,
+  StepperInput,
+};
