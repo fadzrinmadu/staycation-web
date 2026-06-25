@@ -13,10 +13,11 @@ const ImageGallery: FC<ImageGalleryProps> = (props: ImageGalleryProps) => {
   
   return (
     <div 
-      className={clsx("flex gap-4 h-[500px]")}
+      className={clsx("flex flex-col gap-4 md:flex-row md:h-[500px]")}
     >
+      {/* Main image — full width di mobile, dominan di desktop */}
       <div 
-        className={clsx("relative flex-[1.4] rounded-2xl overflow-hidden")}
+        className={clsx("relative w-full h-[260px] rounded-2xl overflow-hidden sm:h-[320px] md:h-auto md:flex-[1.4]")}
       >
         <Image 
           src={mainImage}
@@ -26,13 +27,14 @@ const ImageGallery: FC<ImageGalleryProps> = (props: ImageGalleryProps) => {
         />
       </div>
       
+      {/* Secondary images — row di mobile, kolom di desktop */}
       <div
-        className={clsx("flex flex-col gap-4 flex-1")}
+        className={clsx("flex flex-row gap-4 md:flex-col md:flex-1")}
       >
         {secondaryImages.slice(0, 2).map((image, index) => (
           <div
             key={index + 2}
-            className="relative flex-1 rounded-2xl overflow-hidden"
+            className="relative flex-1 h-[160px] rounded-2xl overflow-hidden sm:h-[200px] md:h-auto"
           >
             <Image 
               src={image}
