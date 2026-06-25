@@ -15,29 +15,33 @@ const PageTitle: FC<PageTitleProps> = (props: PageTitleProps) => {
   
   return (
     <div 
-      className={clsx("flex items-center justify-between py-8")}
+      className={clsx("flex flex-col items-center gap-3 py-6 md:flex-row md:items-center md:justify-between md:py-8")}
     >
-      <Breadcrumb 
-        items={breadcrumbItems} 
-      />
-      
-      <div 
-        className={clsx("text-center flex-1")}
-      >
-        <h1 
-          className={clsx("text-[42px] font-semibold text-[#152C5B]")}
-        >
-          {title}
-        </h1>
-        <p
-          className={clsx("text-[18px] font-light text-[#969696]")}
-        >
-          {description}
-        </p>
+      <div className="w-full md:w-auto">
+        <Breadcrumb 
+          items={breadcrumbItems} 
+        />
       </div>
       
       <div 
-        className="invisible"
+        className={clsx("text-center flex-1 px-4")}
+      >
+        <h1 
+          className={clsx("text-2xl font-semibold text-[#152C5B] sm:text-3xl md:text-[42px]")}
+        >
+          {title}
+        </h1>
+        {description && (
+          <p
+            className={clsx("mt-1 text-sm font-light text-[#969696] sm:text-base md:text-[18px]")}
+          >
+            {description}
+          </p>
+        )}
+      </div>
+      
+      <div 
+        className="hidden md:block md:invisible md:w-auto"
       >
         <Breadcrumb 
           items={breadcrumbItems} 
