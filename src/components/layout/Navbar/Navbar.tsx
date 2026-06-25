@@ -42,7 +42,7 @@ const Navbar: React.FC<NavbarProps> = (props: NavbarProps) => {
           <button 
             onClick={handleToggleMenu} 
             aria-expanded={toggleMenu}
-            className={clsx("w-12 h-12 flex justify-end items-center cursor-pointer block md:hidden")}
+            className={clsx("w-12 h-12 flex justify-end items-center cursor-pointer md:hidden")}
           >
             <MenuIcon />
           </button>
