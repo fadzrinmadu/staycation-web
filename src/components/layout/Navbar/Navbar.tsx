@@ -12,7 +12,7 @@ interface NavbarProps {
 }
 
 const Navbar: React.FC<NavbarProps> = (props: NavbarProps) => {
-  const { variant } = props;
+  const { variant = "default" } = props;
   
   const [toggleMenu, setToggleMenu] = useState(false);
   const [activeId, setActiveId] = useState("home");
