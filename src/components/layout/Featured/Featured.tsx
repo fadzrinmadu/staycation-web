@@ -7,6 +7,7 @@ import {
   FeaturedItem, 
   FeaturedItemProps, 
 } from "@/components/ui/FeaturedItem";
+
 interface FeaturedProps {
   title: string;
   type: "highlight" | "recommended";
@@ -28,12 +29,16 @@ const Featured: React.FC<FeaturedProps> = (props: FeaturedProps) => {
           <Link 
             key={`${item.id}-${index + 2}`}
             href={`/stays/${item.id}`}
+            className={clsx(
+              "block h-full",
+              type === "highlight" && index === 0 && "md:row-span-2"
+            )}
           >
             <FeaturedItem 
               {...item}
               key={item.id}
               type={type}
-              className={clsx(type === "highlight" && index === 0 && "row-span-2")}
+              className="h-full"
             />
           </Link>
         ))}
