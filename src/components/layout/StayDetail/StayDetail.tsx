@@ -29,7 +29,7 @@ import {
 const StayDetail: FC = () => {
   return (
     <div
-      className={clsx("flex flex-col gap-y-[50px]")}
+      className={clsx("flex flex-col gap-y-8 md:gap-y-[50px]")}
     >
       <PageTitle 
         title="Blue Origin Fams"
@@ -52,11 +52,13 @@ const StayDetail: FC = () => {
         alt="Sample Image Gallery"
       />
       
+      {/* Di mobile: kolom (detail dulu, booking di bawah). Di desktop: baris seperti semula */}
       <div
-        className={clsx("flex gap-x-[40px]")}
+        className={clsx("flex flex-col gap-y-8 lg:flex-row lg:gap-x-[40px] lg:gap-y-0")}
       >
+        {/* Kiri: deskripsi + stats */}
         <div
-          className={clsx("flex flex-col gap-y-[30px]")}
+          className={clsx("flex flex-col gap-y-[30px] flex-1 min-w-0")}
         >
           <SectionParagraph
             title="About the place"
@@ -69,7 +71,7 @@ const StayDetail: FC = () => {
           
           <div>
             <div
-              className={clsx("grid grid-cols-4 gap-x-[20px] gap-y-[30px] w-max-full w-min-[580px]")}
+              className={clsx("grid grid-cols-2 gap-x-5 gap-y-6 sm:grid-cols-4")}
             >
               <StatsItem 
                 icon={<BedroomIcon />} 
@@ -115,15 +117,20 @@ const StayDetail: FC = () => {
           </div>
         </div>
         
-        <BookingCard
-          pricePerNight={280}
-          defaultNights={2}
-          defaultStartDate={new Date("2025-01-20")}
-          defaultEndDate={new Date("2025-01-22")}
-          onBook={(nights, start, end) => {
-            console.log("Booking:", { nights, start, end });
-          }}
-        />
+        {/* Kanan: BookingCard — full width di mobile, sticky di desktop */}
+        <div className="w-full lg:w-auto lg:flex-shrink-0">
+          <div className="lg:sticky lg:top-6">
+            <BookingCard
+              pricePerNight={280}
+              defaultNights={2}
+              defaultStartDate={new Date("2025-01-20")}
+              defaultEndDate={new Date("2025-01-22")}
+              onBook={(nights, start, end) => {
+                console.log("Booking:", { nights, start, end });
+              }}
+            />
+          </div>
+        </div>
       </div>
     </div>
   );
