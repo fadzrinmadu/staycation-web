@@ -8,16 +8,22 @@ interface PageTitleProps {
   title: string;
   description?: string;
   breadcrumbItems: BreadcrumbItem[];
+  showBreadCrumb?: boolean;
 }
 
 const PageTitle: FC<PageTitleProps> = (props: PageTitleProps) => {
-  const { title, description, breadcrumbItems } = props;
+  const { title, description, breadcrumbItems, showBreadCrumb } = props;
   
   return (
     <div 
       className={clsx("flex flex-col items-center gap-3 py-6 md:flex-row md:items-center md:justify-between md:py-8")}
     >
-      <div className="w-full md:w-auto">
+      <div 
+        className={clsx(
+          "w-full md:w-auto",
+          showBreadCrumb && "hidden"
+        )}
+      >
         <Breadcrumb 
           items={breadcrumbItems} 
         />
