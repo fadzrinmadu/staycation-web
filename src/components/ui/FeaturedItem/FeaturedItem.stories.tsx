@@ -18,3 +18,29 @@ export const Default = () => {
     />
   );
 };
+
+export const Recommended = () => {
+  return (
+    <FeaturedItem
+      id="featured-item-2"
+      imagePath={FeaturedExample1}
+      title="Blue Origin Fams"
+      description="Jakarta, Indonesia"
+      type="recommended"
+    />
+  );
+};
+
+export const Booking = () => {
+  return (
+    <FeaturedItem
+      id="featured-item-3"
+      imagePath={FeaturedExample1}
+      title="Blue Origin Fams"
+      description="Jakarta, Indonesia"
+      type="booking"
+      price="$480 USD"
+      duration="2 night"
+    />
+  );
+};
