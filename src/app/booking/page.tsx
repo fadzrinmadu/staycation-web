@@ -193,7 +193,7 @@ const Booking = () => {
                 { id: "step-2" },
                 { id: "step-3" },
               ]}
-              currentStep={2}
+              currentStep={3}
             />
           </div>
 
