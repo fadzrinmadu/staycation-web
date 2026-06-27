@@ -1,4 +1,6 @@
-import React, { FC } from "react";
+"use client"
+
+import React, { FC } from "react"; 
 import clsx from "clsx";
 
 import { thingsToDo } from "@/components/layout/Featured/data";

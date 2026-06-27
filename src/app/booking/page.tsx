@@ -1,0 +1,104 @@
+import clsx from "clsx";
+
+import { Navbar } from "@/components/layout";
+import { Button, FieldInput, PageTitle, Stepper } from "@/components/ui";
+import { FeaturedItem } from "@/components/ui/FeaturedItem";
+import { FeaturedExample1 } from "@/assets/images/examples";
+
+const Booking = () => {
+  return (
+    <>
+      <header
+        id="header"
+        className={clsx("border-b border-b-[#E5E5E5] px-4 md:px-6 mb-[40px] md:mb-[80px]")}
+      >
+        <nav
+          id="navbar"
+          className={clsx("w-[1110px] max-w-full m-auto")}
+        >
+          <Navbar variant="centered" />
+        </nav>
+      </header>
+
+      <main className={clsx("w-[1110px] max-w-full mx-auto px-4 md:px-6 lg:px-[60px]")}>
+        
+        {/* BOOKING STEP 1 */}
+        <section className="mb-[50px]">
+
+          {/* Stepper */}
+          <div className={clsx("w-[200px] md:w-[275px] mx-auto mb-[30px] md:mb-[50px]")}>
+            <Stepper
+              steps={[
+                { id: "step-1" },
+                { id: "step-2" },
+                { id: "step-3" },
+              ]}
+              currentStep={0}
+            />
+          </div>
+
+          {/* Page Title */}
+          <div className={clsx("mb-[40px] md:mb-[60px]")}>
+            <PageTitle
+              title="Booking Information"
+              description="Please fill up the blank fields"
+              showBreadCrumb={false}
+            />
+          </div>
+
+          {/* Content */}
+          <div className={clsx(
+            "flex flex-col md:flex-row",
+            "items-stretch",
+            "gap-y-[40px] md:gap-x-[60px]",
+            "mb-[50px]"
+          )}>
+
+            <div className="w-full md:flex-1 md:basis-0 md:min-w-0">
+              <FeaturedItem
+                id="featured-item-3"
+                imagePath={FeaturedExample1}
+                title="Blue Origin Fams"
+                description="Jakarta, Indonesia"
+                type="booking"
+                price="$480 USD"
+                duration="2 night"
+                className="w-full"
+              />
+            </div>
+
+            {/* Pembatas */}
+            <div className="block md:hidden h-px w-full bg-[#E5E5E5]" />
+            <div className="hidden md:block w-px self-stretch bg-[#E5E5E5]" />
+
+            <form className="w-full md:flex-1 md:basis-0 md:min-w-0">
+              <div className="flex flex-col gap-y-4">
+                <FieldInput label="First name" placeholder="Ann" type="text" />
+                <FieldInput label="Last name" placeholder="Joe" type="text" />
+                <FieldInput label="Email address" placeholder="ann.joe@email.com" type="email" />
+                <FieldInput label="Phone number" placeholder="081342008811" type="phone" />
+              </div>
+            </form>
+          </div>
+
+          {/* Buttons */}
+          <div className={clsx("flex flex-col gap-y-[20px] items-center")}>
+            <Button
+              text="Continue to Book"
+              variant="primary"
+              className="w-full md:w-[300px]"
+            />
+            <Button
+              text="Continue"
+              variant="secondary"
+              className="w-full md:w-[300px]"
+            />
+          </div>
+
+        </section>
+      </main>
+    </>
+  );
+};
+
+export default Booking;

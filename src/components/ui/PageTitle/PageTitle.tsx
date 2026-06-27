@@ -7,7 +7,7 @@ import { BreadcrumbItem } from "@/components/ui/Breadcrumb";
 interface PageTitleProps {
   title: string;
   description?: string;
-  breadcrumbItems: BreadcrumbItem[];
+  breadcrumbItems?: BreadcrumbItem[];
   showBreadCrumb?: boolean;
 }
 
@@ -25,7 +25,7 @@ const PageTitle: FC<PageTitleProps> = (props: PageTitleProps) => {
         )}
       >
         <Breadcrumb 
-          items={breadcrumbItems} 
+          items={breadcrumbItems || []} 
         />
       </div>
       
@@ -50,7 +50,7 @@ const PageTitle: FC<PageTitleProps> = (props: PageTitleProps) => {
         className="hidden md:block md:invisible md:w-auto"
       >
         <Breadcrumb 
-          items={breadcrumbItems} 
+          items={breadcrumbItems || []} 
         />
       </div>
     </div>

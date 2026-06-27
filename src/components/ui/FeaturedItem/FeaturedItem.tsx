@@ -28,7 +28,7 @@ const FeaturedItem: React.FC<FeaturedItemProps> = (props: FeaturedItemProps) => 
           "relative rounded-[15px] overflow-hidden h-[215px]",
           type === "highlight" && "min-h-full",
           type === "recommended" && "mb-4",
-          type === "booking" && "mb-4",
+          type === "booking" && "mb-4 h-[270px]",
         )}
       >
         <Overlay />

@@ -7,7 +7,7 @@ interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
 }
 
 const Button: React.FC<ButtonProps> = (props: ButtonProps) => {
-  const { text, variant } = props;
+  const { text, variant, className, ...rest } = props;
   
   const baseClass = "min-h-[50px] min-w-[210px] p-3 text-base rounded-sm cursor-pointer";
   const primaryClass = `
@@ -22,7 +22,8 @@ const Button: React.FC<ButtonProps> = (props: ButtonProps) => {
   
   return (
     <button 
-      className={clsx(baseClass, variant === "primary" ? primaryClass : secondaryClass)}
+      {...rest}
+      className={clsx(baseClass, variant === "primary" ? primaryClass : secondaryClass, className)}
     >
       {text}
     </button>

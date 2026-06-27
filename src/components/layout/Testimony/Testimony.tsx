@@ -1,4 +1,4 @@
-import React from "react";
+import React, { FC } from "react";
 import Image, { StaticImageData } from "next/image";
 
 import { Button, Rating, Text, Title } from "@/components/ui";
@@ -12,7 +12,7 @@ interface TestimonyProps {
   onReadStory?: () => void;
 }
 
-const Testimony: React.FC<TestimonyProps> = (props) => {
+const Testimony: FC<TestimonyProps> = (props: TestimonyProps) => {
   const { image, title, rating, quote, author, onReadStory } = props;
 
   return (

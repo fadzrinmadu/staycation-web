@@ -9,6 +9,7 @@ import PageTitle from "./PageTitle";
 import Rating from "./Rating";
 import SectionParagraph from "./SectionParagraph";
 import StatsItem from "./StatsItem";
+import Stepper from "./Stepper";
 import Text from "./Text";
 import Title from "./Title";
 
@@ -24,6 +25,7 @@ export {
   Rating,
   SectionParagraph,
   StatsItem,
+  Stepper,
   Text,
   Title,
 };

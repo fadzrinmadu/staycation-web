@@ -1,7 +1,8 @@
 "use client"
 
-import { FC } from "react";
 import clsx from "clsx";
+import { FC } from "react";
+import { useRouter } from "next/navigation";
 
 import FeaturedExample1Image from "@/assets/images/examples/featured-example-1.jpg";
 import FeaturedExample2Image from "@/assets/images/examples/featured-example-2.jpg";
@@ -27,6 +28,9 @@ import {
 } from "@/assets/images/icons";
 
 const StayDetail: FC = () => {
+  console.log("StayDetail rendered");
+  const router = useRouter();
+  
   return (
     <div
       className={clsx("flex flex-col gap-y-8 md:gap-y-[50px]")}
@@ -52,11 +56,9 @@ const StayDetail: FC = () => {
         alt="Sample Image Gallery"
       />
       
-      {/* Di mobile: kolom (detail dulu, booking di bawah). Di desktop: baris seperti semula */}
       <div
         className={clsx("flex flex-col gap-y-8 lg:flex-row lg:gap-x-[40px] lg:gap-y-0")}
       >
-        {/* Kiri: deskripsi + stats */}
         <div
           className={clsx("flex flex-col gap-y-[30px] flex-1 min-w-0")}
         >
@@ -117,7 +119,6 @@ const StayDetail: FC = () => {
           </div>
         </div>
         
-        {/* Kanan: BookingCard — full width di mobile, sticky di desktop */}
         <div className="w-full lg:w-auto lg:flex-shrink-0">
           <div className="lg:sticky lg:top-6">
             <BookingCard
@@ -127,6 +128,7 @@ const StayDetail: FC = () => {
               defaultEndDate={new Date("2025-01-22")}
               onBook={(nights, start, end) => {
                 console.log("Booking:", { nights, start, end });
+                router.push("/booking")
               }}
             />
           </div>
