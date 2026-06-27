@@ -5,6 +5,8 @@ import { Button, FieldInput, PageTitle, Stepper, TransferPayment } from "@/compo
 import { FeaturedItem } from "@/components/ui/FeaturedItem";
 import { FeaturedExample1 } from "@/assets/images/examples";
 import { BcaIcon, MandiriIcon } from "@/assets/images/icons";
+import { BookingCompleted } from "@/assets/images/illustrations";
+import Image from "next/image";
 
 const Booking = () => {
   return (
@@ -99,7 +101,7 @@ const Booking = () => {
         </section>
         
         {/* BOOKING STEP 2 */}
-        <section id="bookingStep2" className="mb-[50px]">
+        <section id="bookingStep2" className="mb-[50px] hidden">
 
           {/* Stepper */}
           <div className={clsx("w-[200px] md:w-[275px] mx-auto mb-[30px] md:mb-[50px]")}>
@@ -174,6 +176,55 @@ const Booking = () => {
             <Button
               text="Continue"
               variant="secondary"
+              className="w-full md:w-[300px]"
+            />
+          </div>
+
+        </section>
+        
+        {/* BOOKING STEP 3 */}
+        <section id="bookingStep3" className="mb-[50px]">
+
+          {/* Stepper */}
+          <div className={clsx("w-[200px] md:w-[275px] mx-auto mb-[30px] md:mb-[50px]")}>
+            <Stepper
+              steps={[
+                { id: "step-1" },
+                { id: "step-2" },
+                { id: "step-3" },
+              ]}
+              currentStep={2}
+            />
+          </div>
+
+          {/* Page Title */}
+          <div className={clsx("mb-[20px] md:mb-[60px]")}>
+            <PageTitle
+              title="Yay! Completed"
+              showBreadCrumb={false}
+            />
+          </div>
+
+          {/* Content */}
+          <div className={clsx("flex flex-col items-center gap-y-6 mx-auto mb-[50px]")}>
+            <Image
+              src={BookingCompleted}
+              alt="Transaction success"
+              width={500}
+              height={500}
+              className="object-contain"
+            />
+            <p className="text-[18px] font-light text-[#969696] text-center leading-relaxed">
+              We will inform you via email later <br />
+              once the transaction has been accepted
+            </p>
+          </div>
+
+          {/* Buttons */}
+          <div className={clsx("flex flex-col gap-y-[20px] items-center")}>
+            <Button
+              text="Back to Home"
+              variant="primary"
               className="w-full md:w-[300px]"
             />
           </div>
