@@ -12,6 +12,7 @@ import StatsItem from "./StatsItem";
 import Stepper from "./Stepper";
 import Text from "./Text";
 import Title from "./Title";
+import TransferPayment from "./TransferPayment";
 
 export {
   Breadcrumb,
@@ -28,6 +29,7 @@ export {
   Stepper,
   Text,
   Title,
+  TransferPayment,
 };
 
 export * from "./Card";

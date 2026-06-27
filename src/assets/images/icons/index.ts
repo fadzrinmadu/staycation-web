@@ -29,3 +29,5 @@ export {
   TreasuresIcon,
   WifiIcon,
 };
+
+export * from "./banks";
