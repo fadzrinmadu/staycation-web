@@ -37,26 +37,18 @@ const BookingCard: FC<BookingCardProps> = (props: BookingCardProps) => {
   
   return (
     <div 
-      className={clsx("bg-white rounded-2xl border border-[#E5E5E5] p-15 flex flex-col gap-[14px] w-full max-w-[445px]")}
+      className={clsx("bg-white rounded-2xl border border-[#E5E5E5] p-15 flex flex-col gap-[14px] w-[445px] max-w-full")}
     >
       {/* Header */}
       <div>
-        <p 
-          className={clsx("text-[#152C5B] font-medium text-[20px]")}
-        >
+        <p className={clsx("text-[#152C5B] font-medium text-[20px]")}>
           Start booking
         </p>
-        <div 
-          className={clsx("flex items-baseline gap-2 mt-[14px]")}
-        >
-          <span 
-            className={clsx("text-[#1ABC9C] font-medium text-[36px]")}
-          >
+        <div className={clsx("flex items-baseline gap-2 mt-[14px]")}>
+          <span className={clsx("text-[#1ABC9C] font-medium text-[36px] tabular-nums")}>
             ${pricePerNight}
           </span>
-          <span 
-            className={clsx("text-[#969696] font-light text-[36px]")}
-          >
+          <span className={clsx("text-[#969696] font-light text-[36px]")}>
             per night
           </span>
         </div>
@@ -78,27 +70,19 @@ const BookingCard: FC<BookingCardProps> = (props: BookingCardProps) => {
       />
 
       {/* Summary */}
-      <p 
-        className={clsx("text-[#969696] text-[16px]")}
-      >
+      <p className={clsx("text-[#969696] text-[16px]")}>
         You will pay{" "}
-        <span 
-          className={clsx("text-[#152C5B] font-medium")}
-        >
+        <span className={clsx("text-[#152C5B] font-medium tabular-nums")}>
           ${totalPrice} USD
         </span>{" "}
         per{" "}
-        <span 
-          className={clsx("text-[#152C5B] font-medium")}
-        >
+        <span className={clsx("text-[#152C5B] font-medium tabular-nums")}>
           {nights} night{nights > 1 ? "s" : ""}
         </span>
       </p>
 
       {/* CTA */}
-      <div
-        className={clsx("flex flex-col pt-[26px]")}
-      >
+      <div className={clsx("flex flex-col pt-[26px]")}>
         <Button
           text="Continue to Book"
           variant="primary"
