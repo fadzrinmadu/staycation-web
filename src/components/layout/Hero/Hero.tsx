@@ -8,27 +8,13 @@ import HeroBanner from "@/assets/images/banners/hero-banner.jpg";
 import { Button, StatsItem, Text, Title } from "@/components/ui";
 import { CitiesIcon, TravelersIcon, TreasuresIcon } from "@/assets/images/icons";
 
-interface HeroProps {}
-
-const statsItems: StatsItemProps[] = [
-  {
-    icon: <TravelersIcon />,
-    value: "80K",
-    label: "travelers"
-  },
-  {
-    icon: <TreasuresIcon />,
-    value: "862",
-    label: "treasures"
-  },
-  {
-    icon: <CitiesIcon />,
-    value: "1K",
-    label: "cities"
-  },
-];
+interface HeroProps {
+  statsItems: StatsItemProps[];
+}
 
 const Hero: React.FC<HeroProps> = (props: HeroProps) => {
+  const { statsItems } = props;
+  
   return (
     <div className="flex flex-col-reverse md:flex-row justify-between items-center gap-10">
       <div className="w-[430px] max-w-full">

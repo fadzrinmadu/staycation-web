@@ -38,11 +38,14 @@ const FeaturedItem: React.FC<FeaturedItemProps> = (props: FeaturedItemProps) => 
             className={clsx("absolute top-0 right-0 z-10 w-[180px] h-[40px]")}
           />
         )}
-        <Image
-          src={imagePath}
-          alt="Featured Item"
-          className={clsx("w-full h-full object-cover")}
-        />
+        <div className="relative w-full h-full">
+          <Image
+            src={imagePath}
+            alt="Featured Item"
+            fill
+            className={clsx("object-cover")}
+          />
+        </div>
       </div>
 
       {/* Info Row */}
