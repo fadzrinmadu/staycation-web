@@ -2,7 +2,7 @@ import React, { FC } from 'react';
 import Image, { StaticImageData } from 'next/image';
 import clsx from 'clsx';
 
-interface ImageGalleryProps {
+export interface ImageGalleryProps {
   mainImage: StaticImageData | string;
   secondaryImages: (StaticImageData | string)[];
   alt?: string;

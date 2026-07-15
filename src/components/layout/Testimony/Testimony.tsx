@@ -12,6 +12,8 @@ interface TestimonyProps {
   onReadStory?: () => void;
 }
 
+export type { TestimonyProps };
+
 const Testimony: FC<TestimonyProps> = (props: TestimonyProps) => {
   const { image, title, rating, quote, author, onReadStory } = props;
 

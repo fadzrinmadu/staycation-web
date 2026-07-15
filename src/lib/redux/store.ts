@@ -1,10 +1,12 @@
 import { configureStore, combineReducers } from "@reduxjs/toolkit";
 import counterReducer from '@/lib/redux/features/counter/counterSlice';
 import memberReducer from './features/member/memberSlice';
+import detailReducer from './features/member/detailSlice';
 
 const rootReducer = combineReducers({
   counter: counterReducer,
   member: memberReducer,
+  detail: detailReducer,
 });
 
 export const makeStore = () => {

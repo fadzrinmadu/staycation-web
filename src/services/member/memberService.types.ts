@@ -52,3 +52,51 @@ export interface LandingPageData {
 }
 
 export interface LandingPageResponse extends LandingPageData {} 
+
+export interface FeatureItem {
+  _id: string;
+  name: string;
+  qty: number;
+  imageUrl: string;
+}
+
+export interface ActivityItem {
+  _id: string;
+  isPopular: boolean;
+  name: string;
+  type: string;
+  imageUrl: string;
+}
+
+export interface BankItem {
+  _id: string;
+  nameBank: string;
+  nomorRekening: string;
+  name: string;
+  imageUrl: string;
+}
+
+export interface CategoryRef {
+  _id: string;
+  name: string;
+}
+
+export interface DetailItem {
+  _id: string;
+  sumBooking: number;
+  country: string;
+  isPopular: boolean;
+  unit: string;
+  imageId: ImageItem[];
+  featureId: FeatureItem[];
+  activityId: ActivityItem[];
+  title: string;
+  price: number;
+  city: string;
+  description: string;
+  categoryId: CategoryRef;
+  bank: BankItem[];
+  testimonial: Testimonial;
+}
+
+export interface DetailResponse extends DetailItem {}

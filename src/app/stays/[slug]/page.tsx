@@ -2,19 +2,32 @@
 
 import React, { FC } from "react"; 
 import clsx from "clsx";
-
-import { thingsToDo } from "@/components/layout/Featured/data";
+import { useStay } from "./hook";
 
 import { 
   Featured, 
   Footer, 
+  Loading, 
   Navbar, 
   StayDetail, 
   Testimony,
 } from "@/components/layout";
-import { TestimonyExample2 } from "@/assets/images/examples/testimony";
 
 const Stay: FC = () => {
+  const {
+    bookingCardData,
+    data,
+    imageGalleryData,
+    pageTitleData,
+    sectionParagraphData,
+    statsItemData,
+    status,
+    testimonyData,
+    thingsToDoData,
+  } = useStay();
+  
+  if (status === "loading" || !data) return <Loading />;
+  
   return (
     <>
       <header 
@@ -35,7 +48,13 @@ const Stay: FC = () => {
           id="stayDetail" 
           className={clsx("w-[1110px] max-w-full m-auto mb-[80px]")}
         >
-          <StayDetail />
+          <StayDetail 
+            pageTitle={pageTitleData}
+            imageGallery={imageGalleryData}
+            sectionParagraph={sectionParagraphData}
+            statsItems={statsItemData}
+            bookingCardData={bookingCardData}
+          />
         </section>
         
         {/* Things to do */}
@@ -46,7 +65,7 @@ const Stay: FC = () => {
           <Featured
             type="recommended" 
             title="Things to do"
-            data={thingsToDo} 
+            data={thingsToDoData} 
           />
         </section>
         
@@ -56,12 +75,7 @@ const Stay: FC = () => {
           className="w-[1110px] max-w-full m-auto mb-[100px]"
         >
           <Testimony
-            image={TestimonyExample2}
-            title="Happy Family"
-            rating={5}
-            quote="As a wife i can pick a great trip with my own lovely family ... thank you!"
-            author="Ann, Product Designer"
-            onReadStory={() => console.log("Read story")}
+            {...testimonyData}
           />
         </section>
       </main>

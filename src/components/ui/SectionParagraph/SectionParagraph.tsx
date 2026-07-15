@@ -1,7 +1,7 @@
 import React, { FC } from 'react';
 import clsx from 'clsx';
 
-interface SectionParagraphProps {
+export interface SectionParagraphProps {
   title?: string;
   paragraphs?: string[];
 }

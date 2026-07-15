@@ -4,7 +4,7 @@ import clsx from 'clsx';
 import Breadcrumb from "@/components/ui/Breadcrumb";
 import { BreadcrumbItem } from "@/components/ui/Breadcrumb";
 
-interface PageTitleProps {
+export interface PageTitleProps {
   title: string;
   description?: string;
   breadcrumbItems?: BreadcrumbItem[];

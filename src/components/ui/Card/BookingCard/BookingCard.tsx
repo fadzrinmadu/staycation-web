@@ -15,6 +15,8 @@ interface BookingCardProps {
   onBook?: (nights: number, startDate: Date | null, endDate: Date | null) => void;
 }
 
+export type { BookingCardProps };
+
 const BookingCard: FC<BookingCardProps> = (props: BookingCardProps) => {
   const {
     pricePerNight,
@@ -30,9 +32,23 @@ const BookingCard: FC<BookingCardProps> = (props: BookingCardProps) => {
 
   const totalPrice = pricePerNight * nights;
 
+  const calculateNights = (start: Date | null, end: Date | null): number | null => {
+    if (!start || !end) return null;
+
+    const msPerDay = 1000 * 60 * 60 * 24;
+    const diff = Math.round((end.getTime() - start.getTime()) / msPerDay);
+
+    return diff > 0 ? diff : null;
+  };
+
   const handleDateChange = (start: Date | null, end: Date | null) => {
     setStartDate(start);
     setEndDate(end);
+
+    const newNights = calculateNights(start, end);
+    if (newNights !== null) {
+      setNights(newNights);
+    }
   };
   
   return (
@@ -57,6 +73,7 @@ const BookingCard: FC<BookingCardProps> = (props: BookingCardProps) => {
       {/* Stepper */}
       <StepperInput
         title="How long you will stay?"
+        min={defaultNights}
         defaultValue={defaultNights}
         onChange={setNights}
       />
