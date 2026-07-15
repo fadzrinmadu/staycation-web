@@ -100,3 +100,49 @@ export interface DetailItem {
 }
 
 export interface DetailResponse extends DetailItem {}
+
+export interface BookingRequest {
+  firstName: string;
+  lastName: string;
+  email: string;
+  phoneNumber: string;
+  itemId: string;
+  duration: number;
+  bookingStartDate: string; // format: MM-DD-YYYY, contoh "07-15-2026"
+  bookingEndDate: string;   // format: MM-DD-YYYY
+  accountHolder: string;
+  bankFrom: string;
+  bankId: string;
+  image: File;
+}
+
+export interface BookingItemRef {
+  _id: string;
+  title: string;
+  price: number;
+  duration: number;
+}
+
+export interface BookingPayment {
+  status: string;
+  proofPayment: string;
+  bankFrom: string;
+  accountHolder: string;
+}
+
+export interface BookingDetail {
+  payments: BookingPayment;
+  _id: string;
+  invoice: string;
+  bookingStartDate: string;
+  bookingEndDate: string;
+  total: number;
+  itemId: BookingItemRef;
+  memberId: string;
+  __v: number;
+}
+
+export interface BookingResponse {
+  message: string;
+  booking: BookingDetail;
+}

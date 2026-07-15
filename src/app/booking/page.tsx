@@ -1,24 +1,33 @@
 "use client";
 
-import { useState } from "react";
 import clsx from "clsx";
-import { useRouter } from "next/navigation";
 
 import { Navbar } from "@/components/layout";
 import { Button, FieldInput, PageTitle, Stepper, TransferPayment } from "@/components/ui";
 import { FeaturedItem } from "@/components/ui/FeaturedItem";
-import { FeaturedExample1 } from "@/assets/images/examples";
 import { BcaIcon, MandiriIcon } from "@/assets/images/icons";
 import { BookingCompleted } from "@/assets/images/illustrations";
 import Image from "next/image";
+import { useBooking } from "./hook";
 
 const Booking = () => {
-  const router = useRouter();
-  const [currentStep, setCurrentStep] = useState(1); // 1 | 2 | 3
-
-  const goNext = () => setCurrentStep((prev) => Math.min(prev + 1, 3));
-  const goHome = () => router.push("/");
-
+  const {
+    currentStep,
+    featuredItemData,
+    transferPaymentData,
+    goHome,
+    goNext,
+    setCurrentStep,
+    step1,
+    step1Errors,
+    handleStep1Change,
+    step2,
+    step2Errors,
+    handleStep2Change,
+    isSubmitting,
+    submitError,
+  } = useBooking();
+  
   return (
     <>
       <header
@@ -60,13 +69,7 @@ const Booking = () => {
             )}>
               <div className="w-full md:flex-1 md:basis-0 md:min-w-0">
                 <FeaturedItem
-                  id="featured-item-3"
-                  imagePath={FeaturedExample1}
-                  title="Blue Origin Fams"
-                  description="Jakarta, Indonesia"
-                  type="booking"
-                  price="$480 USD"
-                  duration="2 night"
+                  {...featuredItemData}
                   className="w-full"
                 />
               </div>
@@ -76,10 +79,42 @@ const Booking = () => {
 
               <form className="w-full md:flex-1 md:basis-0 md:min-w-0">
                 <div className="flex flex-col gap-y-4">
-                  <FieldInput label="First name" placeholder="Ann" type="text" />
-                  <FieldInput label="Last name" placeholder="Joe" type="text" />
-                  <FieldInput label="Email address" placeholder="ann.joe@email.com" type="email" />
-                  <FieldInput label="Phone number" placeholder="081342008811" type="phone" />
+                  <FieldInput
+                    label="First name"
+                    placeholder="Ann"
+                    type="text"
+                    required
+                    value={step1.firstName}
+                    onChange={handleStep1Change("firstName")}
+                    error={step1Errors.firstName}
+                  />
+                  <FieldInput
+                    label="Last name"
+                    placeholder="Joe"
+                    type="text"
+                    required
+                    value={step1.lastName}
+                    onChange={handleStep1Change("lastName")}
+                    error={step1Errors.lastName}
+                  />
+                  <FieldInput
+                    label="Email address"
+                    placeholder="ann.joe@email.com"
+                    type="email"
+                    required
+                    value={step1.email}
+                    onChange={handleStep1Change("email")}
+                    error={step1Errors.email}
+                  />
+                  <FieldInput
+                    label="Phone number"
+                    placeholder="081342008811"
+                    type="phone"
+                    required
+                    value={step1.phoneNumber}
+                    onChange={handleStep1Change("phoneNumber")}
+                    error={step1Errors.phoneNumber}
+                  />
                 </div>
               </form>
             </div>
@@ -127,22 +162,7 @@ const Booking = () => {
             )}>
               <div className="w-full md:flex-1 md:basis-0 md:min-w-0">
                 <TransferPayment
-                  tax={10}
-                  subTotal={480}
-                  banks={[
-                    {
-                      logo: <BcaIcon />,
-                      bankName: "Bank Central Asia",
-                      accountNumber: "2208 1996",
-                      accountHolder: "Buildwith Angga",
-                    },
-                    {
-                      logo: <MandiriIcon />,
-                      bankName: "Bank Mandiri",
-                      accountNumber: "2208 1996",
-                      accountHolder: "Buildwith Angga",
-                    },
-                  ]}
+                  {...transferPaymentData}
                 />
               </div>
 
@@ -151,25 +171,58 @@ const Booking = () => {
 
               <form className="w-full md:flex-1 md:basis-0 md:min-w-0">
                 <div className="flex flex-col gap-y-4">
-                  <FieldInput label="Upload bukti transfer" placeholder="Browse a file ..." type="file" />
-                  <FieldInput label="Asal bank" placeholder="Please type here ..." type="text" />
-                  <FieldInput label="Nama pengirim" placeholder="Please type here ..." type="text" />
+                  <div className="flex flex-col gap-y-4">
+                    <FieldInput
+                      label="Upload bukti transfer"
+                      placeholder="Browse a file ..."
+                      type="file"
+                      required
+                      onChange={handleStep2Change("image")}
+                      error={step2Errors.image}
+                    />
+                    <FieldInput
+                      label="Asal bank"
+                      placeholder="Please type here ..."
+                      type="text"
+                      required
+                      value={step2.bankFrom}
+                      onChange={handleStep2Change("bankFrom")}
+                      error={step2Errors.bankFrom}
+                    />
+                    <FieldInput
+                      label="Nama pengirim"
+                      placeholder="Please type here ..."
+                      type="text"
+                      required
+                      value={step2.accountHolder}
+                      onChange={handleStep2Change("accountHolder")}
+                      error={step2Errors.accountHolder}
+                    />
+                  </div>
                 </div>
               </form>
             </div>
+            
+            {submitError && (
+              <p className="text-[14px] text-red-400 text-center mb-4">
+                {submitError}
+              </p>
+            )}
 
             <div className={clsx("flex flex-col gap-y-[20px] items-center")}>
               <Button
-                text="Continue to Book"
+                text={isSubmitting ? "Submitting..." : "Continue to Book"}
                 variant="primary"
                 className="w-full md:w-[300px]"
                 onClick={goNext}
+                disabled={isSubmitting}
               />
               <Button
                 text="Back"
                 variant="secondary"
                 className="w-full md:w-[300px]"
                 onClick={() => setCurrentStep(1)}
+                disabled={isSubmitting}
               />
             </div>
 

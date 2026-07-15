@@ -2,7 +2,6 @@
 
 import clsx from "clsx";
 import { FC } from "react";
-import { useRouter } from "next/navigation";
 
 import { 
   BookingCard,
@@ -48,8 +47,6 @@ export const statsItemsData = {
 };
 
 const StayDetail: FC<StayDetailProps> = (props: StayDetailProps) => {
-  const router = useRouter();
-
   const { 
     imageGallery,
     pageTitle,
@@ -100,10 +97,6 @@ const StayDetail: FC<StayDetailProps> = (props: StayDetailProps) => {
           <div className="lg:sticky lg:top-6">
             <BookingCard
               {...bookingCardData}
-              onBook={(nights, start, end) => {
-                console.log("Booking:", { nights, start, end });
-                router.push("/booking")
-              }}
             />
           </div>
         </div>

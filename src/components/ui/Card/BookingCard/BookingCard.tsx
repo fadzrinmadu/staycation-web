@@ -44,11 +44,6 @@ const BookingCard: FC<BookingCardProps> = (props: BookingCardProps) => {
   const handleDateChange = (start: Date | null, end: Date | null) => {
     setStartDate(start);
     setEndDate(end);
-
-    const newNights = calculateNights(start, end);
-    if (newNights !== null) {
-      setNights(newNights);
-    }
   };
   
   return (

@@ -20,6 +20,7 @@ const FieldInput: React.FC<FieldInputProps> = ({
   required,
   className,
   onBlur,
+  onChange,
   accept = "image/*",
   maxSizeMB = 5,
   ...rest
@@ -73,7 +74,7 @@ const FieldInput: React.FC<FieldInputProps> = ({
       reader.readAsDataURL(file);
     }
 
-    rest.onChange?.(e);
+    onChange?.(e);
   };
 
   const handleRemoveFile = () => {
@@ -95,7 +96,6 @@ const FieldInput: React.FC<FieldInputProps> = ({
           </label>
         )}
 
-        {/* Dropzone area */}
         <div
           onClick={() => fileInputRef.current?.click()}
           className={clsx(
@@ -106,14 +106,12 @@ const FieldInput: React.FC<FieldInputProps> = ({
           )}
         >
           {preview ? (
-            // Preview gambar
             <div className="relative">
               <img
                 src={preview}
                 alt="Preview"
                 className="w-full max-h-[200px] object-cover rounded-[4px]"
               />
-              {/* Tombol hapus */}
               <button
                 type="button"
                 onClick={(e) => {
@@ -133,7 +131,6 @@ const FieldInput: React.FC<FieldInputProps> = ({
               </button>
             </div>
           ) : (
-            // Placeholder upload
             <div className="flex flex-col items-center justify-center gap-2 py-8 px-4">
               <div className="text-[#D3D6DC] text-3xl">📁</div>
               <p className="text-[14px] text-[#152C5B] font-medium">
@@ -146,7 +143,6 @@ const FieldInput: React.FC<FieldInputProps> = ({
           )}
         </div>
 
-        {/* Nama file */}
         {fileName && !preview && (
           <div className="flex items-center justify-between px-2">
             <p className="text-[12px] text-[#152C5B] truncate">{fileName}</p>
@@ -160,7 +156,6 @@ const FieldInput: React.FC<FieldInputProps> = ({
           </div>
         )}
 
-        {/* Hidden input */}
         <input
           ref={fileInputRef}
           type="file"
@@ -190,6 +185,7 @@ const FieldInput: React.FC<FieldInputProps> = ({
         type={type}
         required={required}
         onBlur={handleBlur}
+        onChange={onChange}
         className={clsx(
           "w-full px-4 py-3 rounded-[4px] bg-[#F5F6F8]",
           "text-[16px] font-normal text-[#152C5B]",

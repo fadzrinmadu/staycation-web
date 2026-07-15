@@ -2,9 +2,10 @@
 
 import React from "react";
 import clsx from "clsx";
+import Image from "next/image";
 
 interface BankInfo {
-  logo: React.ReactNode;
+  logo: string | React.ReactNode;
   bankName: string;
   accountNumber: string;
   accountHolder: string;
@@ -28,6 +29,21 @@ const TransferPayment: React.FC<TransferPaymentProps> = ({
 
   const formatUSD = (amount: number) =>
     `$${amount.toLocaleString("en-US")} USD`;
+
+  const renderLogo = (logo: BankInfo["logo"], bankName: string) => {
+    if (typeof logo === "string") {
+      return (
+        <Image
+          src={logo}
+          alt={bankName}
+          width={60}
+          height={40}
+          className="object-contain"
+        />
+      );
+    }
+    return logo;
+  };
 
   return (
     <div className={clsx("flex flex-col gap-y-4", className)}>
@@ -58,7 +74,7 @@ const TransferPayment: React.FC<TransferPaymentProps> = ({
           <div key={index} className="flex items-center gap-x-4">
             {/* Logo */}
             <div className="w-[60px] h-[40px] rounded-[4px] overflow-hidden flex-shrink-0 flex items-center justify-center">
-              {bank.logo}
+              {renderLogo(bank.logo, bank.bankName)}
             </div>
 
             {/* Info */}

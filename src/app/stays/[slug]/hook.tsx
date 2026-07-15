@@ -7,14 +7,16 @@ import { PageTitleProps } from "@/components/ui/PageTitle/PageTitle";
 import { SectionParagraphProps } from "@/components/ui/SectionParagraph/SectionParagraph";
 import { StatsItemProps } from "@/components/ui/StatsItem";
 import { IMAGE_PATH } from "@/constants";
+import { setItemBookingState } from "@/lib/redux/features/member/bookingSlice";
 import { fetchDetailPage } from "@/lib/redux/features/member/detailSlice";
 import { useAppDispatch, useAppSelector } from "@/lib/redux/hook";
-import { useParams } from "next/navigation";
+import { useParams, useRouter } from "next/navigation";
 import { useEffect } from "react";
 
 export function useStay() {
   const dispatch = useAppDispatch();
   const { slug } = useParams();
+  const router = useRouter();
   
   const { data, status, error } = useAppSelector((state) => state.detail); 
   
@@ -93,6 +95,17 @@ export function useStay() {
       defaultNights: data?.sumBooking || 2,
       defaultStartDate: new Date(),
       defaultEndDate: new Date(new Date().setDate(new Date().getDate() + (data?.sumBooking || 2))),
+      onBook: (nights, start, end) => {
+        console.log("Booking:", { nights, start, end });
+        if (!data) return;
+        dispatch(setItemBookingState({
+          item: data,
+          nights: nights,
+          bookingStartDate: (start || new Date()).toISOString(),
+          bookingEndDate: (end || new Date()).toISOString(),
+        }));
+        router.push("/booking")
+      }
     };
   }
   
