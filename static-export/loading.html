@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Loading | Staycation</title>
+  <meta name="description" content="Loading state shown while Staycation fetches places to stay.">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Loading | Staycation">
+  <meta property="og:description" content="Loading state shown while Staycation fetches places to stay.">
+  <meta property="og:image" content="assets/img/hero-banner.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="icon" href="assets/favicon.ico" sizes="any">
+  <link rel="stylesheet" href="css/tailwind.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="antialiased">
+
+  <div role="status" aria-live="polite"
+       class="flex flex-col items-center justify-center min-h-screen gap-8 bg-white">
+    <svg width="220" height="80" viewBox="0 0 220 80" fill="none"
+         xmlns="http://www.w3.org/2000/svg"
+         class="motion-reduce:[&_*]:!animate-none" aria-hidden="true">
+      <path d="M10 60 C 60 60, 60 20, 110 20 C 160 20, 160 60, 210 60"
+            stroke="#E5E5E5" stroke-width="2" stroke-dasharray="4 6" fill="none"/>
+      <g>
+        <animateMotion dur="2.2s" repeatCount="indefinite"
+                       path="M10 60 C 60 60, 60 20, 110 20 C 160 20, 160 60, 210 60"/>
+        <circle r="7" fill="#111111"/>
+        <circle r="3" fill="#ffffff"/>
+      </g>
+    </svg>
+
+    <p class="text-sm text-neutral-600 tracking-wide animate-[fadeIn_0.4s_ease-in-out]"
+       data-loading-message>Finding the best places for you...</p>
+  </div>
+
+  <script src="js/main.js" defer></script>
+</body>
+</html>

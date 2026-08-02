@@ -1,0 +1,351 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Booking | Staycation</title>
+  <meta name="description" content="Complete your booking: fill in your details, transfer the payment and upload your proof of transfer.">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Booking | Staycation">
+  <meta property="og:description" content="Complete your booking: fill in your details, transfer the payment and upload your proof of transfer.">
+  <meta property="og:image" content="assets/img/featured-example-1.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="icon" href="assets/favicon.ico" sizes="any">
+  <link rel="stylesheet" href="css/tailwind.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="antialiased">
+
+  <header id="header" class="border-b border-b-[#E5E5E5] px-4 md:px-6 mb-[40px] md:mb-[80px]">
+    <nav id="navbar" class="w-[1110px] max-w-full m-auto">
+      <div class="relative h-20 py-7 flex items-center justify-center">
+        <a href="index.html" class="block">
+          <img src="assets/icons/logo.svg" alt="Staycation" width="135" height="26" loading="lazy">
+        </a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="w-[1110px] max-w-full mx-auto px-4 md:px-6 lg:px-[60px]">
+
+    <!-- BOOKING STEP 1 -->
+    <section id="bookingStep1" class="mb-[50px]" data-booking-step="1">
+
+      <div class="w-[200px] md:w-[275px] mx-auto mb-[30px] md:mb-[50px]">
+        <div class="flex items-center">
+          <div class="w-12 h-12 rounded-full flex items-center justify-center flex-shrink-0 transition-colors duration-300 bg-[#E5E5E5] ring-1 ring-offset-4 ring-[#E5E5E5]" data-step-circle="1">
+            <span class="text-[#898989] text-[18px] font-light select-none font-medium">1</span>
+          </div>
+          <div class="flex-1 h-px bg-[#E5E5E5] mx-1"></div>
+          <div class="w-12 h-12 rounded-full flex items-center justify-center flex-shrink-0 transition-colors duration-300 bg-[#E5E5E5]" data-step-circle="2">
+            <span class="text-[#898989] text-[18px] font-light select-none">2</span>
+          </div>
+          <div class="flex-1 h-px bg-[#E5E5E5] mx-1"></div>
+          <div class="w-12 h-12 rounded-full flex items-center justify-center flex-shrink-0 transition-colors duration-300 bg-[#E5E5E5]" data-step-circle="3">
+            <span class="text-[#898989] text-[18px] font-light select-none">3</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="mb-[40px] md:mb-[60px]">
+        <div class="flex flex-col items-center gap-3 py-6 md:flex-row md:items-center md:justify-between md:py-8">
+          <div class="w-full md:w-auto">
+            <nav>
+              <ol class="flex items-center gap-6">
+              </ol>
+            </nav>
+          </div>
+
+          <div class="text-center flex-1 px-4">
+            <h1 class="text-2xl font-semibold text-[#152C5B] sm:text-3xl md:text-[42px]">Booking Information</h1>
+            <p class="mt-1 text-sm font-light text-[#969696] sm:text-base md:text-[18px]">Please fill up the blank fields</p>
+          </div>
+
+          <div class="hidden md:block md:invisible md:w-auto">
+            <nav>
+              <ol class="flex items-center gap-6">
+              </ol>
+            </nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="flex flex-col md:flex-row items-stretch gap-y-[40px] md:gap-x-[60px] mb-[50px]">
+        <div class="w-full md:flex-1 md:basis-0 md:min-w-0">
+          <div class="relative w-full">
+            <div class="relative rounded-[15px] overflow-hidden h-[215px] mb-4 h-[270px]">
+              <div class="absolute z-10 top-0 left-0 right-0 bottom-0 bg-linear-[180deg,rgba(0,0,0,0)_53%,rgba(0,0,0,.50)_100%]"></div>
+              <div class="relative w-full h-full">
+                <img src="assets/img/featured-example-1.jpg" alt="Featured Item" width="350" height="460" class="object-cover absolute inset-0 w-full h-full" loading="lazy">
+              </div>
+            </div>
+
+            <!-- Info Row -->
+            <div class="flex items-center justify-between gap-4">
+              <div>
+                <h3 class="text-[20px] font-semibold text-[#152C5B]">Village Angga</h3>
+                <p class="text-[15px] font-light text-[#969696]">Bogor, Indonesia</p>
+              </div>
+              <div class="text-right shrink-0">
+                <span class="text-[#152C5B] text-[16px] font-medium">$104 USD </span>
+                <span class="text-[#969696] text-[16px] font-light">per </span>
+                <span class="text-[#152C5B] text-[16px] font-medium">2 night</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="block md:hidden h-px w-full bg-[#E5E5E5]"></div>
+        <div class="hidden md:block w-px self-stretch bg-[#E5E5E5]"></div>
+
+        <form class="w-full md:flex-1 md:basis-0 md:min-w-0" novalidate>
+          <div class="flex flex-col gap-y-4">
+            <div class="flex flex-col gap-1 w-full">
+              <label for="firstName" class="text-[16px] font-normal text-[#152C5B]">First name<span class="text-red-400 ml-1">*</span></label>
+              <input id="firstName" name="firstName" type="text" required
+                     data-validate="text" placeholder="Ann"
+                     class="w-full px-4 py-3 rounded-[4px] bg-[#F5F6F8] text-[16px] font-normal text-[#152C5B] border border-transparent placeholder:text-[#D3D6DC] outline-none focus:border-[#3252DF] transition-colors duration-200">
+              <p class="text-[12px] text-red-400" data-error hidden></p>
+            </div>
+            <div class="flex flex-col gap-1 w-full">
+              <label for="lastName" class="text-[16px] font-normal text-[#152C5B]">Last name<span class="text-red-400 ml-1">*</span></label>
+              <input id="lastName" name="lastName" type="text" required
+                     data-validate="text" placeholder="Joe"
+                     class="w-full px-4 py-3 rounded-[4px] bg-[#F5F6F8] text-[16px] font-normal text-[#152C5B] border border-transparent placeholder:text-[#D3D6DC] outline-none focus:border-[#3252DF] transition-colors duration-200">
+              <p class="text-[12px] text-red-400" data-error hidden></p>
+            </div>
+            <div class="flex flex-col gap-1 w-full">
+              <label for="email" class="text-[16px] font-normal text-[#152C5B]">Email address<span class="text-red-400 ml-1">*</span></label>
+              <input id="email" name="email" type="email" required
+                     data-validate="email" placeholder="ann.joe@email.com"
+                     class="w-full px-4 py-3 rounded-[4px] bg-[#F5F6F8] text-[16px] font-normal text-[#152C5B] border border-transparent placeholder:text-[#D3D6DC] outline-none focus:border-[#3252DF] transition-colors duration-200">
+              <p class="text-[12px] text-red-400" data-error hidden></p>
+            </div>
+            <div class="flex flex-col gap-1 w-full">
+              <label for="phoneNumber" class="text-[16px] font-normal text-[#152C5B]">Phone number<span class="text-red-400 ml-1">*</span></label>
+              <input id="phoneNumber" name="phoneNumber" type="tel" required
+                     data-validate="phone" placeholder="081342008811"
+                     class="w-full px-4 py-3 rounded-[4px] bg-[#F5F6F8] text-[16px] font-normal text-[#152C5B] border border-transparent placeholder:text-[#D3D6DC] outline-none focus:border-[#3252DF] transition-colors duration-200">
+              <p class="text-[12px] text-red-400" data-error hidden></p>
+            </div>
+          </div>
+        </form>
+      </div>
+
+      <div class="flex flex-col gap-y-[20px] items-center">
+        <button type="button" class="min-h-[50px] min-w-[210px] p-3 text-base rounded-sm cursor-pointer text-white bg-[#2749DE] shadow-[0px_8px_15px_0px_rgba(39,73,222,0.3)] hover:bg-[#1A3ABD] hover:shadow-[0px_10px_20px_0px_rgba(39,73,222,0.4)] w-full md:w-[300px]" data-goto-step="2">Continue to Book</button>
+        <button type="button" class="min-h-[50px] min-w-[210px] p-3 text-base rounded-sm cursor-pointer text-[#B2B2B2] bg-[#F5F6F8] hover:text-[#898989] hover:bg-[#E5E5E5] w-full md:w-[300px]" data-go-home>Cancel</button>
+      </div>
+
+    </section>
+
+    <!-- BOOKING STEP 2 -->
+    <section id="bookingStep2" class="mb-[50px]" data-booking-step="2" hidden>
+
+      <div class="w-[200px] md:w-[275px] mx-auto mb-[30px] md:mb-[50px]">
+        <div class="flex items-center">
+          <div class="w-12 h-12 rounded-full flex items-center justify-center flex-shrink-0 transition-colors duration-300 bg-[#5BBFAA]" data-step-circle="1">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M4 10L8.5 14.5L16 6" stroke="white" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <div class="flex-1 h-px bg-[#E5E5E5] mx-1"></div>
+          <div class="w-12 h-12 rounded-full flex items-center justify-center flex-shrink-0 transition-colors duration-300 bg-[#E5E5E5] ring-1 ring-offset-4 ring-[#E5E5E5]" data-step-circle="2">
+            <span class="text-[#898989] text-[18px] font-light select-none font-medium">2</span>
+          </div>
+          <div class="flex-1 h-px bg-[#E5E5E5] mx-1"></div>
+          <div class="w-12 h-12 rounded-full flex items-center justify-center flex-shrink-0 transition-colors duration-300 bg-[#E5E5E5]" data-step-circle="3">
+            <span class="text-[#898989] text-[18px] font-light select-none">3</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="mb-[40px] md:mb-[60px]">
+        <div class="flex flex-col items-center gap-3 py-6 md:flex-row md:items-center md:justify-between md:py-8">
+          <div class="w-full md:w-auto">
+            <nav>
+              <ol class="flex items-center gap-6">
+              </ol>
+            </nav>
+          </div>
+
+          <div class="text-center flex-1 px-4">
+            <h1 class="text-2xl font-semibold text-[#152C5B] sm:text-3xl md:text-[42px]">Payment</h1>
+            <p class="mt-1 text-sm font-light text-[#969696] sm:text-base md:text-[18px]">Kindly follow the instructions below</p>
+          </div>
+
+          <div class="hidden md:block md:invisible md:w-auto">
+            <nav>
+              <ol class="flex items-center gap-6">
+              </ol>
+            </nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="flex flex-col md:flex-row items-stretch gap-y-[40px] md:gap-x-[60px] mb-[50px]">
+        <div class="w-full md:flex-1 md:basis-0 md:min-w-0">
+          <div class="flex flex-col gap-y-4">
+            <!-- Title -->
+            <h3 class="text-[16px] font-normal text-[#152C5B]">Transfer Pembayaran:</h3>
+
+            <!-- Summary -->
+            <div class="flex flex-col gap-y-3">
+              <div class="flex items-center gap-x-[60px]">
+                <span class="text-[16px] font-normal text-[#152C5B] w-[80px]">Tax:</span>
+                <span class="text-[16px] font-medium text-[#152C5B]">10%</span>
+              </div>
+              <div class="flex items-center gap-x-[60px]">
+                <span class="text-[16px] font-normal text-[#152C5B] w-[80px]">Sub total:</span>
+                <span class="text-[16px] font-medium text-[#152C5B]">$104 USD</span>
+              </div>
+              <div class="flex items-center gap-x-[60px]">
+                <span class="text-[16px] font-normal text-[#152C5B] w-[80px]">Total:</span>
+                <span class="text-[16px] font-medium text-[#152C5B]">$114.4 USD</span>
+              </div>
+            </div>
+
+            <!-- Bank List -->
+            <div class="flex flex-col gap-y-4 mt-2">
+              <div class="flex items-center gap-x-4">
+                <div class="w-[60px] h-[40px] rounded-[4px] overflow-hidden flex-shrink-0 flex items-center justify-center">
+                  <img src="assets/icons/bca.svg" alt="Bank Central Asia" width="90" height="70" class="object-contain" loading="lazy">
+                </div>
+                <div class="flex flex-col gap-y-[2px]">
+                  <span class="text-[14px] font-normal text-[#152C5B]">Bank Central Asia</span>
+                  <span class="text-[14px] font-normal text-[#152C5B]">2208 1996</span>
+                  <span class="text-[14px] font-normal text-[#152C5B]">Staycation</span>
+                </div>
+              </div>
+              <div class="flex items-center gap-x-4">
+                <div class="w-[60px] h-[40px] rounded-[4px] overflow-hidden flex-shrink-0 flex items-center justify-center">
+                  <img src="assets/icons/mandiri.svg" alt="Bank Mandiri" width="90" height="70" class="object-contain" loading="lazy">
+                </div>
+                <div class="flex flex-col gap-y-[2px]">
+                  <span class="text-[14px] font-normal text-[#152C5B]">Bank Mandiri</span>
+                  <span class="text-[14px] font-normal text-[#152C5B]">1208 1996</span>
+                  <span class="text-[14px] font-normal text-[#152C5B]">Staycation</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="block md:hidden h-px w-full bg-[#E5E5E5]"></div>
+        <div class="hidden md:block w-px self-stretch bg-[#E5E5E5]"></div>
+
+        <form class="w-full md:flex-1 md:basis-0 md:min-w-0" novalidate>
+          <div class="flex flex-col gap-y-4">
+            <div class="flex flex-col gap-y-4">
+              <div class="flex flex-col gap-1 w-full" data-upload data-max-mb="5">
+                <label for="proofOfTransfer" class="text-[16px] font-normal text-[#152C5B]">Upload bukti transfer<span class="text-red-400 ml-1">*</span></label>
+
+                <div class="w-full rounded-[4px] bg-[#F5F6F8] border border-dashed border-[#D3D6DC] cursor-pointer transition-colors duration-200 hover:border-[#3252DF] hover:bg-[#F0F3FF]" data-upload-dropzone>
+                  <div class="flex flex-col items-center justify-center gap-2 py-8 px-4" data-upload-empty>
+                    <div class="text-[#D3D6DC] text-3xl" aria-hidden="true">📁</div>
+                    <p class="text-[14px] text-[#152C5B] font-medium">Click to upload image</p>
+                    <p class="text-[12px] text-[#D3D6DC]">PNG, JPG, WEBP · Max 5MB</p>
+                  </div>
+                  <div class="relative" data-upload-preview hidden>
+                    <img src="" alt="Preview" class="w-full max-h-[200px] object-cover rounded-[4px]" data-upload-preview-img>
+                    <button type="button" class="absolute top-2 right-2 bg-white rounded-full w-6 h-6 flex items-center justify-center text-[#152C5B] text-sm font-bold shadow hover:bg-red-50 hover:text-red-400 transition-colors duration-200" data-upload-remove
+                            aria-label="Remove uploaded image">✕</button>
+                  </div>
+                </div>
+
+                <div class="flex items-center justify-between px-2" data-upload-filename-row hidden>
+                  <p class="text-[12px] text-[#152C5B] truncate" data-upload-filename></p>
+                  <button type="button" data-upload-remove
+                          class="text-[12px] text-red-400 hover:text-red-600 ml-2 flex-shrink-0">Remove</button>
+                </div>
+
+                <input id="proofOfTransfer" name="proofOfTransfer" type="file" accept="image/*" required
+                       class="hidden" data-upload-input>
+
+                <p class="text-[12px] text-red-400" data-error hidden></p>
+              </div>
+              <div class="flex flex-col gap-1 w-full">
+                <label for="bankFrom" class="text-[16px] font-normal text-[#152C5B]">Asal bank<span class="text-red-400 ml-1">*</span></label>
+                <input id="bankFrom" name="bankFrom" type="text" required
+                       data-validate="text" placeholder="Please type here ..."
+                       class="w-full px-4 py-3 rounded-[4px] bg-[#F5F6F8] text-[16px] font-normal text-[#152C5B] border border-transparent placeholder:text-[#D3D6DC] outline-none focus:border-[#3252DF] transition-colors duration-200">
+                <p class="text-[12px] text-red-400" data-error hidden></p>
+              </div>
+              <div class="flex flex-col gap-1 w-full">
+                <label for="accountHolder" class="text-[16px] font-normal text-[#152C5B]">Nama pengirim<span class="text-red-400 ml-1">*</span></label>
+                <input id="accountHolder" name="accountHolder" type="text" required
+                       data-validate="text" placeholder="Please type here ..."
+                       class="w-full px-4 py-3 rounded-[4px] bg-[#F5F6F8] text-[16px] font-normal text-[#152C5B] border border-transparent placeholder:text-[#D3D6DC] outline-none focus:border-[#3252DF] transition-colors duration-200">
+                <p class="text-[12px] text-red-400" data-error hidden></p>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+
+      <div class="flex flex-col gap-y-[20px] items-center">
+        <button type="button" class="min-h-[50px] min-w-[210px] p-3 text-base rounded-sm cursor-pointer text-white bg-[#2749DE] shadow-[0px_8px_15px_0px_rgba(39,73,222,0.3)] hover:bg-[#1A3ABD] hover:shadow-[0px_10px_20px_0px_rgba(39,73,222,0.4)] w-full md:w-[300px]" data-goto-step="3">Continue to Book</button>
+        <button type="button" class="min-h-[50px] min-w-[210px] p-3 text-base rounded-sm cursor-pointer text-[#B2B2B2] bg-[#F5F6F8] hover:text-[#898989] hover:bg-[#E5E5E5] w-full md:w-[300px]" data-goto-step="1">Back</button>
+      </div>
+
+    </section>
+
+    <!-- BOOKING STEP 3 -->
+    <section id="bookingStep3" class="mb-[50px]" data-booking-step="3" hidden>
+
+      <div class="w-[200px] md:w-[275px] mx-auto mb-[30px] md:mb-[50px]">
+        <div class="flex items-center">
+          <div class="w-12 h-12 rounded-full flex items-center justify-center flex-shrink-0 transition-colors duration-300 bg-[#5BBFAA]" data-step-circle="1">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M4 10L8.5 14.5L16 6" stroke="white" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <div class="flex-1 h-px bg-[#E5E5E5] mx-1"></div>
+          <div class="w-12 h-12 rounded-full flex items-center justify-center flex-shrink-0 transition-colors duration-300 bg-[#5BBFAA]" data-step-circle="2">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M4 10L8.5 14.5L16 6" stroke="white" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <div class="flex-1 h-px bg-[#E5E5E5] mx-1"></div>
+          <div class="w-12 h-12 rounded-full flex items-center justify-center flex-shrink-0 transition-colors duration-300 bg-[#5BBFAA]" data-step-circle="3">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M4 10L8.5 14.5L16 6" stroke="white" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+        </div>
+      </div>
+
+      <div class="flex flex-col items-center gap-3 py-6 md:flex-row md:items-center md:justify-between md:py-8">
+        <div class="w-full md:w-auto">
+          <nav>
+            <ol class="flex items-center gap-6">
+            </ol>
+          </nav>
+        </div>
+
+        <div class="text-center flex-1 px-4">
+          <h1 class="text-2xl font-semibold text-[#152C5B] sm:text-3xl md:text-[42px]">Yay! Completed</h1>
+        </div>
+
+        <div class="hidden md:block md:invisible md:w-auto">
+          <nav>
+            <ol class="flex items-center gap-6">
+            </ol>
+          </nav>
+        </div>
+      </div>
+
+      <div class="flex flex-col items-center gap-y-6 mx-auto mb-[50px]">
+        <img src="assets/img/booking-completed.jpg" alt="Transaction success" width="500" height="500" class="object-contain" loading="lazy">
+        <p class="text-[18px] font-light text-[#969696] text-center leading-relaxed">
+          We will inform you via email later <br>
+          once the transaction has been accepted
+        </p>
+      </div>
+
+      <div class="flex flex-col gap-y-[20px] items-center">
+        <button type="button" class="min-h-[50px] min-w-[210px] p-3 text-base rounded-sm cursor-pointer text-white bg-[#2749DE] shadow-[0px_8px_15px_0px_rgba(39,73,222,0.3)] hover:bg-[#1A3ABD] hover:shadow-[0px_10px_20px_0px_rgba(39,73,222,0.4)] w-full md:w-[300px]" data-go-home>Back to Home</button>
+      </div>
+
+    </section>
+
+  </main>
+
+  <script src="js/main.js" defer></script>
+</body>
+</html>

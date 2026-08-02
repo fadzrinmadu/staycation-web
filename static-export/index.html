@@ -1,0 +1,559 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Staycation | Web Travel Agency</title>
+  <meta name="description" content="Forget busy work, start next vacation. Staycation helps you find and book beautiful places to stay with your family.">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Staycation | Web Travel Agency">
+  <meta property="og:description" content="Forget busy work, start next vacation. Staycation helps you find and book beautiful places to stay with your family.">
+  <meta property="og:image" content="assets/img/hero-banner.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="icon" href="assets/favicon.ico" sizes="any">
+  <link rel="stylesheet" href="css/tailwind.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="antialiased">
+
+  <header id="header" class="border-b border-b-[#E5E5E5] px-6 mb-[80px]">
+    <nav id="navbar" class="w-[1110px] max-w-full m-auto">
+      <div class="relative h-20 py-7 flex items-center justify-between">
+        <a href="index.html" class="block">
+          <img src="assets/icons/logo.svg" alt="Staycation" width="135" height="26" loading="lazy">
+        </a>
+        <button type="button" aria-expanded="false" aria-controls="navbarMenu"
+                aria-label="Toggle navigation menu" data-menu-toggle
+                class="w-12 h-12 flex justify-end items-center cursor-pointer md:hidden">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-menu-icon lucide-menu" aria-hidden="true"><path d="M4 5h16"/><path d="M4 12h16"/><path d="M4 19h16"/></svg>
+        </button>
+        <ul id="navbarMenu" data-menu-list
+            class="absolute md:static top-[88px] left-0 right-0 flex flex-col md:flex-row
+                   gap-y-3 md:gap-x-12 py-4 md:py-0 overflow-hidden bg-gray-100
+                   md:bg-transparent text-center transition-all duration-300 ease-in-out
+                   min-h-0 md:min-h-auto opacity-0 md:opacity-100">
+          <li>
+            <a href="#" data-menu-item="home"
+               class="py-3 block transition-colors text-[#2749DE]">Home</a>
+          </li>
+          <li>
+            <a href="#" data-menu-item="browseBy"
+               class="py-3 block transition-colors text-[#152C5B]">Browse by</a>
+          </li>
+          <li>
+            <a href="#" data-menu-item="stories"
+               class="py-3 block transition-colors text-[#152C5B]">Stories</a>
+          </li>
+          <li>
+            <a href="#" data-menu-item="agents"
+               class="py-3 block transition-colors text-[#152C5B]">Agents</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <main class="px-6">
+    <section id="hero" class="w-[1110px] max-w-full m-auto mb-[80px]">
+      <div class="flex flex-col-reverse md:flex-row justify-between items-center gap-10">
+        <div class="w-[430px] max-w-full">
+          <h1 class="text-[42px] font-bold text-[#152C5B] mb-5">Forget busy work, start next vacation</h1>
+          <p class="leading[1.7] text-base text-[#969696] font-light mb-[30px] w-[365px] max-w-full">We provide  what you need to enjoy your holiday with family. Time to make another memorable moments.</p>
+          <div class="mb-[60px]">
+            <button type="button" class="min-h-[50px] min-w-[210px] p-3 text-base rounded-sm cursor-pointer text-white bg-[#2749DE] shadow-[0px_8px_15px_0px_rgba(39,73,222,0.3)] hover:bg-[#1A3ABD] hover:shadow-[0px_10px_20px_0px_rgba(39,73,222,0.4)]">Show Me Now</button>
+          </div>
+          <div class="flex flex-wrap gap-6">
+            <div>
+              <div class="mb-[10px]">
+                <img src="assets/icons/travelers.svg" alt="travelers" width="32" height="32" loading="lazy">
+              </div>
+              <div class="text-base">
+                <span class="font-medium text-[#152C5B]">80K</span>
+                <span class="font-light text-[#969696]">travelers</span>
+              </div>
+            </div>
+            <div>
+              <div class="mb-[10px]">
+                <img src="assets/icons/treasures.svg" alt="treasures" width="32" height="32" loading="lazy">
+              </div>
+              <div class="text-base">
+                <span class="font-medium text-[#152C5B]">862</span>
+                <span class="font-light text-[#969696]">treasures</span>
+              </div>
+            </div>
+            <div>
+              <div class="mb-[10px]">
+                <img src="assets/icons/cities.svg" alt="cities" width="32" height="32" loading="lazy">
+              </div>
+              <div class="text-base">
+                <span class="font-medium text-[#152C5B]">1K</span>
+                <span class="font-light text-[#969696]">cities</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div>
+          <img src="assets/img/hero-banner.jpg" alt="Hero Banner" width="537" height="433" class="w-[537px] max-w-full" loading="lazy">
+        </div>
+      </div>
+    </section>
+
+    <section id="mostPicked" class="w-[1110px] max-w-full m-auto mb-[80px]">
+      <div id="featured">
+        <h1 class="text-[24px] font-medium text-[#152C5B] mb-[20px]">Most picked</h1>
+        <div class="grid gap-[30px] grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+          <a href="stays/detail.html" class="block h-full md:row-span-2">
+            <div class="relative h-full">
+              <div class="relative rounded-[15px] overflow-hidden h-[215px] min-h-full">
+                <div class="absolute z-10 top-0 left-0 right-0 bottom-0 bg-linear-[180deg,rgba(0,0,0,0)_53%,rgba(0,0,0,.50)_100%]"></div>
+                <div class="w-[180px] max-w-full h-10 bg-[#FF498B] flex justify-center items-center rounded-bl-[18px] absolute top-0 right-0 z-10 w-[180px] h-[40px]">
+                  <p class="text-white text-[15px]">
+                    <span class="font-medium">$50</span>
+                    <span class="font-light">per night</span>
+                  </p>
+                </div>
+                <div class="relative w-full h-full">
+                  <img src="assets/img/featured-example-1.jpg" alt="Featured Item" width="350" height="460" class="object-cover absolute inset-0 w-full h-full" loading="lazy">
+                </div>
+              </div>
+
+              <!-- Info Row -->
+              <div class="absolute z-10 left-4 bottom-4 text-white">
+                <div>
+                  <h3 class="text-[20px] font-semibold">Blue Origin Fams</h3>
+                  <p class="text-[15px] font-light">Jakarta, Indonesia</p>
+                </div>
+              </div>
+            </div>
+          </a>
+          <a href="stays/detail.html" class="block h-full">
+            <div class="relative h-full">
+              <div class="relative rounded-[15px] overflow-hidden h-[215px] min-h-full">
+                <div class="absolute z-10 top-0 left-0 right-0 bottom-0 bg-linear-[180deg,rgba(0,0,0,0)_53%,rgba(0,0,0,.50)_100%]"></div>
+                <div class="w-[180px] max-w-full h-10 bg-[#FF498B] flex justify-center items-center rounded-bl-[18px] absolute top-0 right-0 z-10 w-[180px] h-[40px]">
+                  <p class="text-white text-[15px]">
+                    <span class="font-medium">$22</span>
+                    <span class="font-light">per night</span>
+                  </p>
+                </div>
+                <div class="relative w-full h-full">
+                  <img src="assets/img/featured-example-2.jpg" alt="Featured Item" width="350" height="215" class="object-cover absolute inset-0 w-full h-full" loading="lazy">
+                </div>
+              </div>
+
+              <!-- Info Row -->
+              <div class="absolute z-10 left-4 bottom-4 text-white">
+                <div>
+                  <h3 class="text-[20px] font-semibold">Ocean Land</h3>
+                  <p class="text-[15px] font-light">Bandung, Indonesia</p>
+                </div>
+              </div>
+            </div>
+          </a>
+          <a href="stays/detail.html" class="block h-full">
+            <div class="relative h-full">
+              <div class="relative rounded-[15px] overflow-hidden h-[215px] min-h-full">
+                <div class="absolute z-10 top-0 left-0 right-0 bottom-0 bg-linear-[180deg,rgba(0,0,0,0)_53%,rgba(0,0,0,.50)_100%]"></div>
+                <div class="w-[180px] max-w-full h-10 bg-[#FF498B] flex justify-center items-center rounded-bl-[18px] absolute top-0 right-0 z-10 w-[180px] h-[40px]">
+                  <p class="text-white text-[15px]">
+                    <span class="font-medium">$85</span>
+                    <span class="font-light">per night</span>
+                  </p>
+                </div>
+                <div class="relative w-full h-full">
+                  <img src="assets/img/featured-example-3.jpg" alt="Featured Item" width="350" height="215" class="object-cover absolute inset-0 w-full h-full" loading="lazy">
+                </div>
+              </div>
+
+              <!-- Info Row -->
+              <div class="absolute z-10 left-4 bottom-4 text-white">
+                <div>
+                  <h3 class="text-[20px] font-semibold">Stark House</h3>
+                  <p class="text-[15px] font-light">Kendari, Indonesia</p>
+                </div>
+              </div>
+            </div>
+          </a>
+          <a href="stays/detail.html" class="block h-full">
+            <div class="relative h-full">
+              <div class="relative rounded-[15px] overflow-hidden h-[215px] min-h-full">
+                <div class="absolute z-10 top-0 left-0 right-0 bottom-0 bg-linear-[180deg,rgba(0,0,0,0)_53%,rgba(0,0,0,.50)_100%]"></div>
+                <div class="w-[180px] max-w-full h-10 bg-[#FF498B] flex justify-center items-center rounded-bl-[18px] absolute top-0 right-0 z-10 w-[180px] h-[40px]">
+                  <p class="text-white text-[15px]">
+                    <span class="font-medium">$62</span>
+                    <span class="font-light">per night</span>
+                  </p>
+                </div>
+                <div class="relative w-full h-full">
+                  <img src="assets/img/featured-example-4.jpg" alt="Featured Item" width="350" height="215" class="object-cover absolute inset-0 w-full h-full" loading="lazy">
+                </div>
+              </div>
+
+              <!-- Info Row -->
+              <div class="absolute z-10 left-4 bottom-4 text-white">
+                <div>
+                  <h3 class="text-[20px] font-semibold">Vinna Vill</h3>
+                  <p class="text-[15px] font-light">Malang, Indonesia</p>
+                </div>
+              </div>
+            </div>
+          </a>
+          <a href="stays/detail.html" class="block h-full">
+            <div class="relative h-full">
+              <div class="relative rounded-[15px] overflow-hidden h-[215px] min-h-full">
+                <div class="absolute z-10 top-0 left-0 right-0 bottom-0 bg-linear-[180deg,rgba(0,0,0,0)_53%,rgba(0,0,0,.50)_100%]"></div>
+                <div class="w-[180px] max-w-full h-10 bg-[#FF498B] flex justify-center items-center rounded-bl-[18px] absolute top-0 right-0 z-10 w-[180px] h-[40px]">
+                  <p class="text-white text-[15px]">
+                    <span class="font-medium">$72</span>
+                    <span class="font-light">per night</span>
+                  </p>
+                </div>
+                <div class="relative w-full h-full">
+                  <img src="assets/img/featured-example-5.jpg" alt="Featured Item" width="350" height="215" class="object-cover absolute inset-0 w-full h-full" loading="lazy">
+                </div>
+              </div>
+
+              <!-- Info Row -->
+              <div class="absolute z-10 left-4 bottom-4 text-white">
+                <div>
+                  <h3 class="text-[20px] font-semibold">Bobox Rows</h3>
+                  <p class="text-[15px] font-light">Medan, Indonesia</p>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section id="houseWithBackyard" class="w-[1110px] max-w-full m-auto mb-[80px]">
+      <div id="featured">
+        <h1 class="text-[24px] font-medium text-[#152C5B] mb-[20px]">House with backyard</h1>
+        <div class="grid gap-[30px] grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
+          <a href="stays/detail.html" class="block h-full">
+            <div class="relative h-full">
+              <div class="relative rounded-[15px] overflow-hidden h-[215px] mb-4">
+                <div class="absolute z-10 top-0 left-0 right-0 bottom-0 bg-linear-[180deg,rgba(0,0,0,0)_53%,rgba(0,0,0,.50)_100%]"></div>
+                <div class="w-[180px] max-w-full h-10 bg-[#FF498B] flex justify-center items-center rounded-bl-[18px] absolute top-0 right-0 z-10 w-[180px] h-[40px]">
+                  <p class="text-white text-[15px]">
+                    <span class="font-medium">Popular</span>
+                    <span class="font-light">choice</span>
+                  </p>
+                </div>
+                <div class="relative w-full h-full">
+                  <img src="assets/img/featured-example-6.jpg" alt="Featured Item" width="255" height="211" class="object-cover absolute inset-0 w-full h-full" loading="lazy">
+                </div>
+              </div>
+
+              <!-- Info Row -->
+              <div class="flex items-center justify-between gap-4">
+                <div>
+                  <h3 class="text-[20px] font-semibold text-[#152C5B]">Tabby Town</h3>
+                  <p class="text-[15px] font-light text-[#969696]">Bogor, Indonesia</p>
+                </div>
+              </div>
+            </div>
+          </a>
+          <a href="stays/detail.html" class="block h-full">
+            <div class="relative h-full">
+              <div class="relative rounded-[15px] overflow-hidden h-[215px] mb-4">
+                <div class="absolute z-10 top-0 left-0 right-0 bottom-0 bg-linear-[180deg,rgba(0,0,0,0)_53%,rgba(0,0,0,.50)_100%]"></div>
+                <div class="relative w-full h-full">
+                  <img src="assets/img/featured-example-7.jpg" alt="Featured Item" width="255" height="211" class="object-cover absolute inset-0 w-full h-full" loading="lazy">
+                </div>
+              </div>
+
+              <!-- Info Row -->
+              <div class="flex items-center justify-between gap-4">
+                <div>
+                  <h3 class="text-[20px] font-semibold text-[#152C5B]">Anggona Rise</h3>
+                  <p class="text-[15px] font-light text-[#969696]">Medan, Indonesia</p>
+                </div>
+              </div>
+            </div>
+          </a>
+          <a href="stays/detail.html" class="block h-full">
+            <div class="relative h-full">
+              <div class="relative rounded-[15px] overflow-hidden h-[215px] mb-4">
+                <div class="absolute z-10 top-0 left-0 right-0 bottom-0 bg-linear-[180deg,rgba(0,0,0,0)_53%,rgba(0,0,0,.50)_100%]"></div>
+                <div class="relative w-full h-full">
+                  <img src="assets/img/featured-example-8.jpg" alt="Featured Item" width="255" height="215" class="object-cover absolute inset-0 w-full h-full" loading="lazy">
+                </div>
+              </div>
+
+              <!-- Info Row -->
+              <div class="flex items-center justify-between gap-4">
+                <div>
+                  <h3 class="text-[20px] font-semibold text-[#152C5B]">Seattle Rain</h3>
+                  <p class="text-[15px] font-light text-[#969696]">Jakarta, Indonesia</p>
+                </div>
+              </div>
+            </div>
+          </a>
+          <a href="stays/detail.html" class="block h-full">
+            <div class="relative h-full">
+              <div class="relative rounded-[15px] overflow-hidden h-[215px] mb-4">
+                <div class="absolute z-10 top-0 left-0 right-0 bottom-0 bg-linear-[180deg,rgba(0,0,0,0)_53%,rgba(0,0,0,.50)_100%]"></div>
+                <div class="relative w-full h-full">
+                  <img src="assets/img/featured-example-9.jpg" alt="Featured Item" width="255" height="215" class="object-cover absolute inset-0 w-full h-full" loading="lazy">
+                </div>
+              </div>
+
+              <!-- Info Row -->
+              <div class="flex items-center justify-between gap-4">
+                <div>
+                  <h3 class="text-[20px] font-semibold text-[#152C5B]">Wodden Pit</h3>
+                  <p class="text-[15px] font-light text-[#969696]">Bengkulu, Indonesia</p>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section id="hotelsWithLivingRoom" class="w-[1110px] max-w-full m-auto mb-[80px]">
+      <div id="featured">
+        <h1 class="text-[24px] font-medium text-[#152C5B] mb-[20px]">Hotels with living room</h1>
+        <div class="grid gap-[30px] grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
+          <a href="stays/detail.html" class="block h-full">
+            <div class="relative h-full">
+              <div class="relative rounded-[15px] overflow-hidden h-[215px] mb-4">
+                <div class="absolute z-10 top-0 left-0 right-0 bottom-0 bg-linear-[180deg,rgba(0,0,0,0)_53%,rgba(0,0,0,.50)_100%]"></div>
+                <div class="relative w-full h-full">
+                  <img src="assets/img/featured-example-10.jpg" alt="Featured Item" width="255" height="215" class="object-cover absolute inset-0 w-full h-full" loading="lazy">
+                </div>
+              </div>
+
+              <!-- Info Row -->
+              <div class="flex items-center justify-between gap-4">
+                <div>
+                  <h3 class="text-[20px] font-semibold text-[#152C5B]">Tabby Town</h3>
+                  <p class="text-[15px] font-light text-[#969696]">Green Park</p>
+                </div>
+              </div>
+            </div>
+          </a>
+          <a href="stays/detail.html" class="block h-full">
+            <div class="relative h-full">
+              <div class="relative rounded-[15px] overflow-hidden h-[215px] mb-4">
+                <div class="absolute z-10 top-0 left-0 right-0 bottom-0 bg-linear-[180deg,rgba(0,0,0,0)_53%,rgba(0,0,0,.50)_100%]"></div>
+                <div class="relative w-full h-full">
+                  <img src="assets/img/featured-example-11.jpg" alt="Featured Item" width="255" height="215" class="object-cover absolute inset-0 w-full h-full" loading="lazy">
+                </div>
+              </div>
+
+              <!-- Info Row -->
+              <div class="flex items-center justify-between gap-4">
+                <div>
+                  <h3 class="text-[20px] font-semibold text-[#152C5B]">Podo Wose</h3>
+                  <p class="text-[15px] font-light text-[#969696]">Surabaya, Indonesia</p>
+                </div>
+              </div>
+            </div>
+          </a>
+          <a href="stays/detail.html" class="block h-full">
+            <div class="relative h-full">
+              <div class="relative rounded-[15px] overflow-hidden h-[215px] mb-4">
+                <div class="absolute z-10 top-0 left-0 right-0 bottom-0 bg-linear-[180deg,rgba(0,0,0,0)_53%,rgba(0,0,0,.50)_100%]"></div>
+                <div class="relative w-full h-full">
+                  <img src="assets/img/featured-example-12.jpg" alt="Featured Item" width="255" height="215" class="object-cover absolute inset-0 w-full h-full" loading="lazy">
+                </div>
+              </div>
+
+              <!-- Info Row -->
+              <div class="flex items-center justify-between gap-4">
+                <div>
+                  <h3 class="text-[20px] font-semibold text-[#152C5B]">Silver Rain</h3>
+                  <p class="text-[15px] font-light text-[#969696]">Bandung, Indonesia</p>
+                </div>
+              </div>
+            </div>
+          </a>
+          <a href="stays/detail.html" class="block h-full">
+            <div class="relative h-full">
+              <div class="relative rounded-[15px] overflow-hidden h-[215px] mb-4">
+                <div class="absolute z-10 top-0 left-0 right-0 bottom-0 bg-linear-[180deg,rgba(0,0,0,0)_53%,rgba(0,0,0,.50)_100%]"></div>
+                <div class="w-[180px] max-w-full h-10 bg-[#FF498B] flex justify-center items-center rounded-bl-[18px] absolute top-0 right-0 z-10 w-[180px] h-[40px]">
+                  <p class="text-white text-[15px]">
+                    <span class="font-medium">Popular</span>
+                    <span class="font-light">choice</span>
+                  </p>
+                </div>
+                <div class="relative w-full h-full">
+                  <img src="assets/img/featured-example-13.jpg" alt="Featured Item" width="255" height="215" class="object-cover absolute inset-0 w-full h-full" loading="lazy">
+                </div>
+              </div>
+
+              <!-- Info Row -->
+              <div class="flex items-center justify-between gap-4">
+                <div>
+                  <h3 class="text-[20px] font-semibold text-[#152C5B]">Cashville</h3>
+                  <p class="text-[15px] font-light text-[#969696]">Kemang, Indonesia</p>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section id="apartmentsWithKitchenSet" class="w-[1110px] max-w-full m-auto mb-[80px]">
+      <div id="featured">
+        <h1 class="text-[24px] font-medium text-[#152C5B] mb-[20px]">Apartments with kitchen set</h1>
+        <div class="grid gap-[30px] grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
+          <a href="stays/detail.html" class="block h-full">
+            <div class="relative h-full">
+              <div class="relative rounded-[15px] overflow-hidden h-[215px] mb-4">
+                <div class="absolute z-10 top-0 left-0 right-0 bottom-0 bg-linear-[180deg,rgba(0,0,0,0)_53%,rgba(0,0,0,.50)_100%]"></div>
+                <div class="relative w-full h-full">
+                  <img src="assets/img/featured-example-14.jpg" alt="Featured Item" width="255" height="215" class="object-cover absolute inset-0 w-full h-full" loading="lazy">
+                </div>
+              </div>
+
+              <!-- Info Row -->
+              <div class="flex items-center justify-between gap-4">
+                <div>
+                  <h3 class="text-[20px] font-semibold text-[#152C5B]">PS Wood</h3>
+                  <p class="text-[15px] font-light text-[#969696]">Depok, Indonesia</p>
+                </div>
+              </div>
+            </div>
+          </a>
+          <a href="stays/detail.html" class="block h-full">
+            <div class="relative h-full">
+              <div class="relative rounded-[15px] overflow-hidden h-[215px] mb-4">
+                <div class="absolute z-10 top-0 left-0 right-0 bottom-0 bg-linear-[180deg,rgba(0,0,0,0)_53%,rgba(0,0,0,.50)_100%]"></div>
+                <div class="relative w-full h-full">
+                  <img src="assets/img/featured-example-15.jpg" alt="Featured Item" width="255" height="215" class="object-cover absolute inset-0 w-full h-full" loading="lazy">
+                </div>
+              </div>
+
+              <!-- Info Row -->
+              <div class="flex items-center justify-between gap-4">
+                <div>
+                  <h3 class="text-[20px] font-semibold text-[#152C5B]">One Five</h3>
+                  <p class="text-[15px] font-light text-[#969696]">Jakarta, Indonesia</p>
+                </div>
+              </div>
+            </div>
+          </a>
+          <a href="stays/detail.html" class="block h-full">
+            <div class="relative h-full">
+              <div class="relative rounded-[15px] overflow-hidden h-[215px] mb-4">
+                <div class="absolute z-10 top-0 left-0 right-0 bottom-0 bg-linear-[180deg,rgba(0,0,0,0)_53%,rgba(0,0,0,.50)_100%]"></div>
+                <div class="w-[180px] max-w-full h-10 bg-[#FF498B] flex justify-center items-center rounded-bl-[18px] absolute top-0 right-0 z-10 w-[180px] h-[40px]">
+                  <p class="text-white text-[15px]">
+                    <span class="font-medium">Popular</span>
+                    <span class="font-light">choice</span>
+                  </p>
+                </div>
+                <div class="relative w-full h-full">
+                  <img src="assets/img/featured-example-16.jpg" alt="Featured Item" width="255" height="215" class="object-cover absolute inset-0 w-full h-full" loading="lazy">
+                </div>
+              </div>
+
+              <!-- Info Row -->
+              <div class="flex items-center justify-between gap-4">
+                <div>
+                  <h3 class="text-[20px] font-semibold text-[#152C5B]">Minimal sun</h3>
+                  <p class="text-[15px] font-light text-[#969696]">Bogor, Indonesia</p>
+                </div>
+              </div>
+            </div>
+          </a>
+          <a href="stays/detail.html" class="block h-full">
+            <div class="relative h-full">
+              <div class="relative rounded-[15px] overflow-hidden h-[215px] mb-4">
+                <div class="absolute z-10 top-0 left-0 right-0 bottom-0 bg-linear-[180deg,rgba(0,0,0,0)_53%,rgba(0,0,0,.50)_100%]"></div>
+                <div class="relative w-full h-full">
+                  <img src="assets/img/featured-example-17.jpg" alt="Featured Item" width="255" height="215" class="object-cover absolute inset-0 w-full h-full" loading="lazy">
+                </div>
+              </div>
+
+              <!-- Info Row -->
+              <div class="flex items-center justify-between gap-4">
+                <div>
+                  <h3 class="text-[20px] font-semibold text-[#152C5B]">Stays Home</h3>
+                  <p class="text-[15px] font-light text-[#969696]">Makassar, Indonesia</p>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section id="testimonial" class="w-[1110px] max-w-full m-auto mb-[100px]">
+      <div class="flex flex-col md:flex-row items-center gap-[70px]">
+        <div class="relative w-[405px] h-[512px] shrink-0">
+          <div class="absolute top-0 left-0 w-[373px] h-[480px] rounded-2xl border border-[#E5E5E5]"></div>
+          <div class="absolute bottom-0 right-0 w-[373px] h-[480px] rounded-2xl rounded-br-[70px] overflow-hidden">
+            <img src="assets/img/testimony-example-1.jpg" alt="Angga, Product Designer" width="405" height="512" class="object-cover absolute inset-0 w-full h-full" loading="lazy">
+          </div>
+        </div>
+
+        <!-- Content -->
+        <div class="w-[640px] max-w-full">
+          <h1 class="text-[24px] font-medium text-[#152C5B] mb-6">Happy Family</h1>
+          <div class="flex gap-1 mb-3" role="img" aria-label="4 out of 5 stars">
+            <img src="assets/icons/star-filled.svg" alt="" width="36" height="36" loading="lazy">
+            <img src="assets/icons/star-filled.svg" alt="" width="36" height="36" loading="lazy">
+            <img src="assets/icons/star-filled.svg" alt="" width="36" height="36" loading="lazy">
+            <img src="assets/icons/star-filled.svg" alt="" width="36" height="36" loading="lazy">
+            <img src="assets/icons/star-outlined.svg" alt="" width="36" height="36" loading="lazy">
+          </div>
+          <p class="leading[1.7] text-[28px] text-[#152C5B] font-regular mb-3">What a great trip with my family and I should try again next time soon ...</p>
+          <p class="leading[1.7] text-base text-[#969696] font-light mb-8">Angga, Product Designer</p>
+          <button type="button" class="min-h-[50px] min-w-[210px] p-3 text-base rounded-sm cursor-pointer text-white bg-[#2749DE] shadow-[0px_8px_15px_0px_rgba(39,73,222,0.3)] hover:bg-[#1A3ABD] hover:shadow-[0px_10px_20px_0px_rgba(39,73,222,0.4)]">Read Their Story</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer id="footer" class="border-t border-t-[#E5E5E5] py-[50px]">
+    <nav class="w-[1110px] max-w-full m-auto mb-[80px] px-6">
+      <div class="flex justify-between gap-x-[80px] gap-y-[24px] mb-[50px] flex-wrap">
+        <div class="w-[258px] max-w-full">
+          <a href="index.html" class="block mb-2">
+            <img src="assets/icons/logo.svg" alt="Staycation" width="135" height="26" loading="lazy">
+          </a>
+          <p class="leading[1.7] text-base text-[#969696] font-light">We kaboom your beauty holiday instantly and memorable</p>
+        </div>
+        <div>
+          <h1 class="text-[18px] font-medium text-[#152C5B] mb-2">For Beginners</h1>
+          <div class="flex flex-col gap-2">
+            <a href="#" class="text-[#969696] font-light text-[16px] hover:underline transition-colors duration-200">New Account</a>
+            <a href="#" class="text-[#969696] font-light text-[16px] hover:underline transition-colors duration-200">Start Booking a Room</a>
+            <a href="#" class="text-[#969696] font-light text-[16px] hover:underline transition-colors duration-200">Use Payments</a>
+          </div>
+        </div>
+        <div>
+          <h1 class="text-[18px] font-medium text-[#152C5B] mb-2">Explore Us</h1>
+          <div class="flex flex-col gap-2">
+            <a href="#" class="text-[#969696] font-light text-[16px] hover:underline transition-colors duration-200">About</a>
+            <a href="#" class="text-[#969696] font-light text-[16px] hover:underline transition-colors duration-200">Privacy Policy</a>
+            <a href="#" class="text-[#969696] font-light text-[16px] hover:underline transition-colors duration-200">Terms & Conditions</a>
+          </div>
+        </div>
+        <div>
+          <h1 class="text-[18px] font-medium text-[#152C5B] mb-2">Getting Touch</h1>
+          <div class="flex flex-col gap-2">
+            <a href="#" class="text-[#969696] font-light text-[16px] hover:underline transition-colors duration-200">support@staycation.id</a>
+            <a href="#" class="text-[#969696] font-light text-[16px] hover:underline transition-colors duration-200">021 - 2208 - 1996</a>
+            <a href="#" class="text-[#969696] font-light text-[16px] hover:underline transition-colors duration-200">Staycation Dy, Jakarta</a>
+          </div>
+        </div>
+      </div>
+      <p class="font-light text-base text-[#969696] text-center">
+        Copyright 2020 • All rights reserved • Staycation
+      </p>
+    </nav>
+  </footer>
+
+  <script src="js/main.js" defer></script>
+</body>
+</html>
